@@ -1,6 +1,6 @@
 This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2026/2027. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
 
-**For non-Edinburgh people**: all the course materials are here and you are welcome to use them with attribution. 
+**For non-Edinburgh people**: all the course materials are here and you are welcome to use them with attribution. The page will fill out incrementally as we work through the semester, the latest complete instantiation of the course was [the 2025 version taught by Jenny Culbertson](https://jennifer-culbertson.github.io/oels2025/).
 
 ## Course summary
 
@@ -31,8 +31,6 @@ There are different assessments for undergraduates and postgraduates.
 
 ### Undergraduate assessment 
 
-**Links to assignment briefs to be added**
-
 The undergraduate version of the course is worth 20 credits and there are two pieces of assessment, due on **early November DATE TBC** and **early December DATE TBC**. Assessment 1 is an annotated bibliography reviewing and evaluating 4 articles typically drawn from the course set readings. Assessment 2 is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [undergraduate assignment brief](assessment/UGAssignmentBrief2026.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
 
 ### Postgraduate assessment
@@ -49,30 +47,17 @@ Each week there will be a set reading and a programming assignment. The reading 
 
 - *Scientific content:* minimal (but I'll go over the practicalities of the course, assessments etc)
 - *Technical content:* jsPsych basics
-<!---
-- [Reading](oels_reading_wk1.md))
-- [Programming task](oels_practical_wk1.md))
-- [Lecture slides](slides/oels_lecture_wk1.pdf)
---->
+
 ### Week 2 (28th September): Crowdsourcing experimental data
 
 - *Scientific content:* lab vs online data collection
 - *Technical content:* more jsPsych and javascript basics
-<!---
-- [Reading](oels_reading_wk2.md)
-- [Programming task](oels_practical_wk2.md)
-- [Lecture slides](slides/oels_lecture_wk2.pdf)
---->
+
 
 ### Week 3 (5th October): Grammaticality judgements
 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
-<!---
-- [Reading](oels_reading_wk3.md)
-- [Programming task](oels_practical_wk3.md)
-- [Lecture slides](slides/oels_lecture_wk3.pdf)
---->
 
 ### Week 4 (12th October): No class!
 
@@ -82,61 +67,33 @@ Use this time to catch up or read ahead.
 
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, more complex nested trials
-<!---
-- [Reading](oels_reading_wk4.md)
-- [Programming task](oels_practical_wk4.md)
-- [Lecture slides](slides/oels_lecture_wk4.pdf)
---->
 
 ### Week 6 (26th October): Word learning / frequency learning
 
 - *Scientific content:* probability matching and regularisation
 - *Technical content:* using trial data for contingent trials, saving data
-<!---
-- [Reading](oels_reading_wk5.md)
-- [Programming task](oels_practical_wk5.md)
-- [Lecture slides](slides/oels_lecture_wk5.pdf)
---->
 
 ### Week 7 (2nd November): Audio stimuli
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Audio, trial data again, preloading stimuli, saving data trial by trial
-<!---
-- [Reading](oels_reading_wk6.md)
-- [Programming task](oels_practical_wk6.md)
-- [Lecture slides](slides/oels_lecture_wk6.pdf)
---->
+
 
 ### Week 8 (9th November): Priming and overspecification
 
 - *Scientific content:* Priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, conditional timelines, reading trial lists from CSV
-<!---
-- [Reading](oels_reading_wk7.md)
-- [Programming task](oels_practical_wk7.md)
-- [Lecture slides](slides/oels_lecture_wk7.pdf)
---->
 
 ### Week 9 (16th November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
-<!---
-- [Reading](oels_reading_wk8.md)
-- [Programming task](oels_practical_wk8.md)
-- [Lecture slides](slides/oels_lecture_wk8.pdf)
---->
 
 ### Week 10 (23rd November): Participant-to-participant interaction
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
-<!---
-- [Reading](oels_reading_wk9.html)
-- [Programming task](oels_practical_wk9.md)
-- [Lecture slides](slides/oels_lecture_wk9.pdf)
---->
+
 
 ### Week 11 (30th November): Interacting with MTurk
 

@@ -45,7 +45,7 @@ Course content will appear here as we work through the course.
 
 Each week there will be a set reading and a programming assignment. The reading involves a blog post introducing a published paper, you read both the blog and the paper, the lecture then provides an additional brief overview and an opportunity to ask questions/discuss the reading. The programming assignment involves working through a section of the [Online Experiments with jsPsych](https://softdev.ppls.ed.ac.uk/online_experiments/index.html) tutorial and/or looking at (and editing) some code which implements a language-related experiment; you can use the lab classes as dedicated time to work on the programming task and get help with programming difficulties or questions you have.
 
-### Week 1 (commencing 16th September): Introduction
+### Week 1 (commencing 21st September): Introduction
 
 - *Scientific content:* minimal (but I'll go over the practicalities of the course, assessments etc)
 - *Technical content:* jsPsych basics
@@ -54,7 +54,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Programming task](oels_practical_wk1.md))
 - [Lecture slides](slides/oels_lecture_wk1.pdf)
 --->
-### Week 2 (23rd September): Crowdsourcing experimental data
+### Week 2 (28th September): Crowdsourcing experimental data
 
 - *Scientific content:* lab vs online data collection
 - *Technical content:* more jsPsych and javascript basics
@@ -64,7 +64,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk2.pdf)
 --->
 
-### Week 3 (30th September): Grammaticality judgements
+### Week 3 (5th October): Grammaticality judgements
 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
@@ -74,7 +74,11 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk3.pdf)
 --->
 
-### Week 4 (7th October): Self-paced reading
+### Week 4 (12th October): No class!
+
+Use this time to catch up or read ahead.
+
+### Week 5 (19th October): Self-paced reading
 
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, more complex nested trials
@@ -84,7 +88,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk4.pdf)
 --->
 
-### Week 5 (13th October): Word learning / frequency learning
+### Week 6 (26th October): Word learning / frequency learning
 
 - *Scientific content:* probability matching and regularisation
 - *Technical content:* using trial data for contingent trials, saving data
@@ -94,7 +98,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk5.pdf)
 --->
 
-### Week 6 (20th October): Audio stimuli
+### Week 7 (2nd November): Audio stimuli
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Audio, trial data again, preloading stimuli, saving data trial by trial
@@ -104,7 +108,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk6.pdf)
 --->
 
-### Week 7 (27th October): Priming and overspecification
+### Week 8 (9th November): Priming and overspecification
 
 - *Scientific content:* Priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, conditional timelines, reading trial lists from CSV
@@ -114,7 +118,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk7.pdf)
 --->
 
-### Week 8 (4th November): Iterated Learning
+### Week 9 (16th November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
@@ -124,22 +128,25 @@ Each week there will be a set reading and a programming assignment. The reading 
 - [Lecture slides](slides/oels_lecture_wk8.pdf)
 --->
 
-### Week 9 (11th November): Participant-to-participant interaction
+### Week 10 (23rd November): Participant-to-participant interaction
 
 - *Scientific content:* least effort and Zipf's Law of Abbreviation
 - *Technical content:* web sockets, python servers, incrementally building a timeline
+<!---
 - [Reading](oels_reading_wk9.html)
 - [Programming task](oels_practical_wk9.md)
 - [Lecture slides](slides/oels_lecture_wk9.pdf)
+--->
 
-### Week 10 (18th November): Interacting with MTurk
+### Week 11 (30th November): Interacting with MTurk
 
 No lecture or lab in week 10, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
 - *Scientific content:* None!
 - *Technical content:* How to set up a server, launch and pay participants, manage qualifications, etc
+<!---
 - [How to get your experiment online](oels_wk10.md)
-
+--->
 
 ### Bonus content
 
@@ -151,18 +158,8 @@ I am sticking some extra documented experiments I have created here, in case the
 
 ### Additional drop-in labs for coding help with the final assignment
 
-We will provide some extra drop-in labs after the conclusion of the regular lectures and labs to give you an opportunity to get 
-some help with your final assignment code. Obviously we won't write your code for you, but if you are having trouble interpreting 
-an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. 
-Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of 
-questions, then go away. 
-- Wednesday 20th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.
-- Wednesday 20th November, 1.30pm-3.00pm, DSB 1.08, with Kenny.
-- Monday 25th November, 11am-12, DSB 1.08, with Kenny.
-- Monday 25th November, 2pm-3pm, DSB 1.08, with Kenny.
-- Wednesday 27th November, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Yajun.
-- Tuesday 3rd December, 1.30pm-3pm, DSB 1.08, with Kenny.
-- Wednesday 4th December, 9am-11am, Appleton Tower room M2 (i.e. usual time and place), with Maisy.
+We will provide some extra drop-in labs after the conclusion of the regular lectures and labs to give you an opportunity to get some help with your final assignment code. Obviously we won't write your code for you, but if you are having trouble interpreting an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of questions, then go away. 
+- **Times and dates in late November/early December TBC**
 
 ## Re-use
 

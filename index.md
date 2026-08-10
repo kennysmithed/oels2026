@@ -47,6 +47,7 @@ Each week there will be a set reading and a programming assignment. The reading 
 
 - *Scientific content:* minimal (but I'll go over the practicalities of the course, assessments etc)
 - *Technical content:* jsPsych basics
+<!--testing hidden comment-->
 
 ### Week 2 (28th September): Crowdsourcing experimental data
 

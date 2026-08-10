@@ -48,11 +48,13 @@ Each week there will be a set reading and a programming assignment. The reading 
 - *Scientific content:* minimal (but I'll go over the practicalities of the course, assessments etc)
 - *Technical content:* jsPsych basics
 <!--testing hidden comment-->
+Visible comment
 
 ### Week 2 (28th September): Crowdsourcing experimental data
 
 - *Scientific content:* lab vs online data collection
 - *Technical content:* more jsPsych and javascript basics
+<!--Rodd 2024 paper?-->
 
 
 ### Week 3 (5th October): Grammaticality judgements

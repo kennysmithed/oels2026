@@ -63,37 +63,38 @@ Each week there will be a set reading and a programming assignment. The reading 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
 <!--Reading: Sprouse-->
-<!--Practical: same as usual, simple html with key-press-->
+<!--Practical: same as usual, simple html with key-press. Code update complete, notes complete.-->
 
 ### Week 4 (12th October): No class!
 
 Use this time to catch up or read ahead.
 
-### Week 5 (19th October): Word learning 
-
-- *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
-- *Technical content:* nested timelines, saving data, using trial data for contingent trials
-<!--Reading: Chua and Pan (2026)-->
-<!--Practical: simple html-button response with image buttons, daving data at end, trial data for feedback-->
-
-### Week 6 (26th October): Self-paced reading
+### Week 5 (19th October): Self-paced reading
 
 - *Scientific content:* processing costs of syntactic dependencies
-- *Technical content:* collecting reaction time data, more complex nested trials
+- *Technical content:* collecting reaction time data, nested timelines, simple text surveys
 <!--Reading and practical: the usual, but need to take account of reversed order. maybe include a running score on correctness, to use trial data again?-->
 
-### Week 7 (2nd November): Speech perception
+
+### Week 6 (26th October): Word learning 
+
+- *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
+- *Technical content:* nested timelines again, accessing trial data, saving data
+<!--Reading: Chua and Pan (2026)-->
+<!--Practical: simple html-button response, saving data at end, simple uses of trial data-->
+
+### Week 7 (2nd November): Frequency learning
+
+- *Scientific content:* probability matching and regularisation
+- *Technical content:* randomisation of `choices`, using trial data for contingent trials, functions that create trials, repeating and randomising trials 
+<!--Reading: Ferdinand et al. 2019-->
+
+
+### Week 8 (9th November): Speech perception
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
-- *Technical content:* Audio stimuli, preloading stimuli, saving data trial by trial
+- *Technical content:* Preloading stimuli, image buttons, saving data trial by trial
 <!--Reading and practical: the usual, but need to take account of changed order-->
-
-### Week 8 (9th November): Learning biases
-
-- *Scientific content:* learnability of vowel harmony / disharmony
-- *Technical content:* multimodal stimuli and working around plugin limitations, conditional timelines
-<!--Reading: Martin & White 2021-->
-<!--Practical: based on my emlar implementation-->
 
 ### Week 9 (16th November): Priming
 

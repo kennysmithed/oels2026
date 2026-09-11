@@ -1,6 +1,6 @@
 This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2026/2027. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
 
-**For non-Edinburgh people**: all the course materials are here and you are welcome to use them with attribution. The page will fill out incrementally as we work through the semester, the latest complete instantiation of the course was [the 2025 version taught by Jenny Culbertson](https://jennifer-culbertson.github.io/oels2025/), [the 2024 version was the last time I taught it](https://kennysmithed.github.io/oels2024/) 
+**For non-Edinburgh people**: all the course materials will appear here and you are welcome to use them with attribution. The page will fill out incrementally as we work through the semester, the latest complete instantiation of the course was [the 2025 version taught by Jenny Culbertson](https://jennifer-culbertson.github.io/oels2025/), [the 2024 version was the last time I taught it](https://kennysmithed.github.io/oels2024/) 
 
 ## Course summary
 

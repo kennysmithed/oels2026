@@ -1,7 +1,9 @@
-theme: jekyll-theme-midnight
+#theme: jekyll-theme-midnight
+remote_theme: pages-themes/leap-day@v0.2.0
 title: Online Experiments for Language Scientists
 description: Academic year 2026-2027
 plugins:
+  - jekyll-remote-theme
   - jekyll-relative-links
 relative_links:
   enabled: true

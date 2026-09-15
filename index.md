@@ -1,6 +1,6 @@
 This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2026/2027. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
 
-**For non-Edinburgh people**: all the course materials will appear here and you are welcome to use them with attribution. The page will fill out incrementally as we work through the semester, the latest complete instantiation of the course was [the 2025 version taught by Jenny Culbertson](https://jennifer-culbertson.github.io/oels2025/), [the 2024 version was the last time I taught it](https://kennysmithed.github.io/oels2024/) 
+**For non-Edinburgh people**: all the course materials will appear here and you are welcome to use them under the terms of the [MIT License](https://github.com/kennysmithed/oels2026/blob/main/LICENSE.txt) and ideally with appropriate attribution following normal academic practices. The page will fill out incrementally as we work through the semester, the latest complete instantiation of the course was [the 2025 version taught by Jenny Culbertson](https://jennifer-culbertson.github.io/oels2025/), [the 2024 version was the last time I taught it](https://kennysmithed.github.io/oels2024/) 
 
 ## Course summary
 
@@ -16,7 +16,7 @@ The course is co-taught by [Kenny Smith](https://kennysmithed.github.io) and [Al
 
 ## Class times
 
-Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, in room M2 [Appleton Tower](https://www.ed.ac.uk/maps/maps?building=0201); this is an open-plan Teaching Studio on the mezzanine level. 
+Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, **venue TBC**. 
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
@@ -27,28 +27,31 @@ Lectures and labs are both essential to doing well on the course - the assessmen
 
 There are different assessments for undergraduates and postgraduates. 
 
-**Links to assignment briefs to be added**
+**Links to detailed assignment briefs and examples of good assignments to be added**
 
 ### Undergraduate assessment 
 
-The undergraduate version of the course is worth 20 credits and there are two pieces of assessment, due on **early November DATE TBC** and **early December DATE TBC**. Assessment 1 is an annotated bibliography reviewing and evaluating 4 articles typically drawn from the course set readings. Assessment 2 is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [undergraduate assignment brief](assessment/UGAssignmentBrief2026.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
+The undergraduate version of the course is worth 20 credits and there are two pieces of assessment, due on 12th November 2026 and 10th December 2026. Assessment 1 is an annotated bibliography reviewing and evaluating 4 articles typically drawn from the course set readings. Assessment 2 is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [undergraduate assignment brief](assessment/UGAssignmentBrief2026.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
 
 ### Postgraduate assessment
 
-The postgraduate version of the course is worth 10 credits and there is a single piece of assessment, due on **early December DATE TBC**. This assessment is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [postgraduate assignment brief](assessment/PGAssignmentBrief2024.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
+The postgraduate version of the course is worth 10 credits and there is a single piece of assessment, due on 10th December 2026. This assessment is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [postgraduate assignment brief](assessment/PGAssignmentBrief2024.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
+
+Optionally postgraduate students can also submit an annotated bibliography in the same format as the undergraduate annotated bibliography and due by the same deadline; this will not be assigned a mark but will receive written feedback.
 
 ## Course Materials
 
 Course content will appear here as we work through the course.
 
-Each week there will be a set reading and a programming assignment. The reading involves a blog post introducing a published paper, you read both the blog and the paper, the lecture then provides an additional brief overview and an opportunity to ask questions/discuss the reading. The programming assignment involves working through a section of the [Online Experiments with jsPsych](https://softdev.ppls.ed.ac.uk/online_experiments/index.html) tutorial and/or looking at (and editing) some code which implements a language-related experiment; you can use the lab classes as dedicated time to work on the programming task and get help with programming difficulties or questions you have.
+Each week there will be a set reading **to be completed before the lecture** and a programming assignment. The reading usually involves a blog post introducing a published paper, you read both the blog and the paper, the lecture then provides an additional brief overview and an opportunity to ask questions/discuss the reading. The programming assignment involves working through a section of the [Online Experiments with jsPsych](https://softdev.ppls.ed.ac.uk/online_experiments/index.html) tutorial and/or looking at (and editing) some code which implements a language-related experiment; you can use the lab classes as dedicated time to work on the programming task and get help with programming difficulties or questions you have.
 
 ### Week 1 (commencing 21st September): Introduction
 
 - *Scientific content:* minimal (but I'll go over the practicalities of the course, assessments etc)
 - *Technical content:* jsPsych basics
-<!--Reading - blog post only-->
-<!--Practical - Alisdair practical-->
+- [Reading](oels_reading_wk1.md)
+- [Programming task](oels_practical_wk1.md)
+- Lecture slides
 
 ### Week 2 (28th September): Crowdsourcing experimental data
 

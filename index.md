@@ -16,7 +16,7 @@ The course is co-taught by [Kenny Smith](https://kennysmithed.github.io) and [Al
 
 ## Class times
 
-Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, **venue TBC**. 
+Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, in the MBA Suite 🎩 in the [Business School](https://www.ed.ac.uk/maps/maps?building=0226), **except on weeks 5 and 6** (21st October, 28th October) when we will be in G.06, [50 George Square](https://www.ed.ac.uk/maps/maps?building=0227). 
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
@@ -74,12 +74,16 @@ Use this time to catch up or read ahead.
 
 ### Week 5 (19th October): Self-paced reading
 
+**NB the lab this week is in toom G.06, 50 George Square.**
+
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, nested timelines, simple text surveys
 <!--Reading and practical: the usual, but need to take account of reversed order. maybe include a running score on correctness, to use trial data again?-->
 
 
 ### Week 6 (26th October): Word learning 
+
+**NB the lab this week is in toom G.06, 50 George Square.**
 
 - *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
 - *Technical content:* nested timelines again, accessing trial data, saving data

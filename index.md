@@ -1,4 +1,4 @@
-This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2026/2027. I will add links to materials (readings, code) to this page; you will need to use Learn for electronic submission of your assessed work, and to keep an eye on announcements.
+This is the webpage for the Honours/MSc course Online Experiments for Language Scientists, running in academic year 2026/2027. I will add links to materials (readings, code) to this page; you will need to use Learn for pre-lecture questions on the reading, electronic submission of your assessed work, and to keep an eye on announcements.
 
 **For non-Edinburgh people**: all the course materials will appear here and you are welcome to use them under the terms of the [MIT License](https://github.com/kennysmithed/oels2026/blob/main/LICENSE.txt) and ideally with appropriate attribution following normal academic practices. The page will fill out incrementally as we work through the semester, the latest complete instantiation of the course was [the 2025 version taught by Jenny Culbertson](https://jennifer-culbertson.github.io/oels2025/), [the 2024 version was the last time I taught it](https://kennysmithed.github.io/oels2024/) 
 
@@ -43,7 +43,13 @@ Optionally postgraduate students can also submit an annotated bibliography in th
 
 Course content will appear here as we work through the course.
 
-Each week there will be a set reading **to be completed before the lecture** and a programming assignment. The reading usually involves a blog post introducing a published paper, you read both the blog and the paper, the lecture then provides an additional brief overview and an opportunity to ask questions/discuss the reading. The programming assignment involves working through a section of the [Online Experiments with jsPsych](https://softdev.ppls.ed.ac.uk/online_experiments/index.html) tutorial and/or looking at (and editing) some code which implements a language-related experiment; you can use the lab classes as dedicated time to work on the programming task and get help with programming difficulties or questions you have.
+Each week there will be a set reading **to be completed before the lecture** and a programming assignment. 
+
+The reading usually involves a blog post introducing a published paper, you read both the blog and the paper. Starting in week 2, you can then flag up any questions you would like me to address in the lecture, using the "Pre-lecture questions" form on Learn. These questions must be submitted by 9am the day of the lecture to give me a (brief) chance to read them! 
+
+The lecture then provides an additional brief overview and a further opportunity to ask questions/discuss the reading. 
+
+The programming assignment involves working through a section of the [Online Experiments with jsPsych](https://softdev.ppls.ed.ac.uk/online_experiments/index.html) tutorial and/or looking at (and editing) some code which implements a language-related experiment; you can use the lab classes as dedicated time to work on the programming task and get help with programming difficulties or questions you have.
 
 ### Week 1 (commencing 21st September): Introduction
 
@@ -51,7 +57,7 @@ Each week there will be a set reading **to be completed before the lecture** and
 - *Technical content:* jsPsych basics
 - [Reading](oels_reading_wk1.md)
 - [Programming task](oels_practical_wk1.md)
-- Lecture slides
+- [Lecture slides](oels_lecture_wk1.pdf)
 
 ### Week 2 (28th September): Crowdsourcing experimental data
 

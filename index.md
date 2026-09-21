@@ -61,8 +61,8 @@ The programming assignment involves working through a section of the [Online Exp
 
 - *Scientific content:* lab vs online data collection
 - *Technical content:* more jsPsych and javascript basics
-<!--Reading: Rodd 2024 paper-->
-<!--Practical - Alisdair practical continued-->
+- [Reading](oels_reading_wk2.md)
+- [Programming task](oels_practical_wk2.md)
 
 
 ### Week 3 (5th October): Grammaticality judgements

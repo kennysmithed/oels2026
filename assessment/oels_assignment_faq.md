@@ -5,7 +5,7 @@ description: Covering anything not covered already in the assignment brief
 
 ## Undergraduate Assessment 1 (Annotated bibliography)
 
-Note that the annotated bibliography is optional for postgraduate students, and contributes 0% to the course mark.
+[Note that the annotated bibliography is optional for postgraduate students, and contributes 0% to their course mark; for undergraduates it is compulsory and worth 30%].
 
 ### Have you got any examples we could look at?
 

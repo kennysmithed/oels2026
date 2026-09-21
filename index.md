@@ -16,7 +16,7 @@ The course is co-taught by [Kenny Smith](https://kennysmithed.github.io) and [Al
 
 ## Class times
 
-Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, in the MBA Suite 🎩 in the [Business School](https://www.ed.ac.uk/maps/maps?building=0226), **except on weeks 5 and 6** (21st October, 28th October) when we will be in G.06, [50 George Square](https://www.ed.ac.uk/maps/maps?building=0227). 
+Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, in the MBA Suite 🎩 in the [Business School](https://www.ed.ac.uk/maps/maps?building=0226), **except on weeks 5 and 6** (21st October, 28th October) when we will be in G.06, [50 George Square](https://www.ed.ac.uk/maps/maps?building=0227). NB The MBA Suite is on the 1st floor, there are signs leading to the room but then the door just says "1.02" rather than "MBA Suite".
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 
@@ -35,7 +35,7 @@ The undergraduate version of the course is worth 20 credits and there are two pi
 
 ### Postgraduate assessment
 
-The postgraduate version of the course is worth 10 credits and there is a single piece of assessment, due on 10th December 2026. This assessment is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [postgraduate assignment brief](assessment/PGAssignmentBrief2024.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
+The postgraduate version of the course is worth 10 credits and there is a single piece of assessment, due on 10th December 2026. This assessment is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [postgraduate assignment brief](assessment/PGAssignmentBrief2026.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.
 
 Optionally postgraduate students can also submit an annotated bibliography in the same format as the undergraduate annotated bibliography and due by the same deadline; this will not be assigned a mark but will receive written feedback.
 

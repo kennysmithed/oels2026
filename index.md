@@ -16,7 +16,9 @@ The course is co-taught by [Kenny Smith](https://kennysmithed.github.io) and [Al
 
 ## Class times
 
-Lectures take place on Monday mornings, 10am-10.50am, in room S1, on the second floor of [7 George Square](https://www.ed.ac.uk/maps/maps?building=0209). Labs are on Wednesday mornings, 9am-10.50am, in the MBA Suite 🎩 in the [Business School](https://www.ed.ac.uk/maps/maps?building=0226), **except on weeks 5 and 6** (21st October, 28th October) when we will be in G.06, [50 George Square](https://www.ed.ac.uk/maps/maps?building=0227). NB The MBA Suite is on the 1st floor, there are signs leading to the room but then the door just says "1.02" rather than "MBA Suite".
+Lectures take place on Monday mornings, 10am-10.50am, in LG.11, [40 George Square](https://www.ed.ac.uk/maps/maps?building=0228) - this is in the basement, round the back of the coffee shop (NB we were in a different room in week 1 but there were problems with that room!). 
+
+Labs are on Wednesday mornings, 9am-10.50am, in the MBA Suite 🎩 in the [Business School](https://www.ed.ac.uk/maps/maps?building=0226), **except on weeks 5 and 6** (21st October, 28th October) when we will be in G.06, [50 George Square](https://www.ed.ac.uk/maps/maps?building=0227). NB The MBA Suite is on the 1st floor, there are signs leading to the room but then the door just says "1.02" rather than "MBA Suite".
 
 There will also be extra drop-in labs available in the run-up to the final assignment, see below.
 

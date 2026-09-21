@@ -43,7 +43,7 @@ There are several things to read/look at this week, to give you a feel for some 
 As you do the readings, make notes of any questions, criticisms or ideas you have, and I'll leave time in the Monday lecture slot so we can discuss these in class. You can ask questions directly in class, or flag them up using the pre-lecture questions form on Learn.
 
 Read:
-- [The wikipedia page explaining what MTurk is.](https://en.wikipedia.org/wiki/Amazon_Mechanical_Turk)
+- [The wikipedia page explaining what MTurk is.](https://en.wikipedia.org/wiki/Amazon_Mechanical_Turk) - while MTurk is closing, this is still a useful overview of (historically) one of the main platforms in the field. 
 - [Stewart, N., Chandler, J., & Paolacci, G. (2017). Crowdsourcing Samples in Cognitive Science.
 *Trends in Cognitive Sciences, 21,* 736-748.](https://doi.org/10.1016/j.tics.2017.06.007)
 

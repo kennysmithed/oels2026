@@ -69,7 +69,7 @@ The programming assignment involves working through a section of the [Online Exp
 
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
-<!--Reading: Sprouse-->
+- [Reading](oels_reading_wk3.md)
 <!--Practical: same as usual, simple html with key-press. Code update complete, notes complete.-->
 
 ### Week 4 (12th October): No class!
@@ -78,7 +78,7 @@ Use this time to catch up or read ahead.
 
 ### Week 5 (19th October): Self-paced reading
 
-**NB the lab this week is in toom G.06, 50 George Square.**
+**NB the lab this week is in room G.06, 50 George Square.**
 
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, nested timelines, simple text surveys
@@ -87,7 +87,7 @@ Use this time to catch up or read ahead.
 
 ### Week 6 (26th October): Word learning 
 
-**NB the lab this week is in toom G.06, 50 George Square.**
+**NB the lab this week is in room G.06, 50 George Square.**
 
 - *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
 - *Technical content:* nested timelines again, accessing trial data, saving data

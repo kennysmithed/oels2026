@@ -40,6 +40,8 @@ The population you are sampling from in an online experiment and the environment
 
 There are several things to read/look at this week, to give you a feel for some of the issues around online vs lab data collection, demographics of online populations, what online experiments look like, and what a crowdsourcing site looks like from the participant's perspective.
 
+As you do the readings, make notes of any questions, criticisms or ideas you have, and I'll leave time in the Monday lecture slot so we can discuss these in class. You can ask questions directly in class, or flag them up using the pre-lecture questions form on Learn.
+
 Read:
 - [The wikipedia page explaining what MTurk is.](https://en.wikipedia.org/wiki/Amazon_Mechanical_Turk)
 - [Stewart, N., Chandler, J., & Paolacci, G. (2017). Crowdsourcing Samples in Cognitive Science.

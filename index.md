@@ -27,8 +27,6 @@ Lectures and labs are both essential to doing well on the course - the assessmen
 
 There are different assessments for undergraduates and postgraduates. 
 
-**Links to detailed assignment briefs and examples of good assignments to be added**
-
 ### Undergraduate assessment 
 
 The undergraduate version of the course is worth 20 credits and there are two pieces of assessment, due on 12th November 2026 and 10th December 2026. Assessment 1 is an annotated bibliography reviewing and evaluating 4 articles typically drawn from the course set readings. Assessment 2 is a project where you produce a working experiment implemented in jsPsych and an accompanying report explaining the motivation behind that experiment, justifying important design decisions you took in building the experiment, and appraising the experiment and ways it could be improved/extended. Full details are provided in the [undergraduate assignment brief](assessment/UGAssignmentBrief2026.pdf) and [the FAQ](assessment/oels_assignment_faq.md) (which also features examples of good assignments). Please also read the [policy on generative AI](assessment/GenerativeAIPolicy.pdf) for this course; if you use generative AI you need to complete and attach [the AI declaration](assessment/AI_declaration.docx) to your submission.

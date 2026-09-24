@@ -57,7 +57,7 @@ The programming assignment involves working through a section of the [Online Exp
 - *Technical content:* jsPsych basics
 - [Reading](oels_reading_wk1.md)
 - [Programming task](oels_practical_wk1.md)
-- [Lecture slides](oels_lecture_wk1.pdf)
+- [Lecture slides](slides/oels_lecture_wk1.pdf)
 
 ### Week 2 (28th September): Crowdsourcing experimental data
 
@@ -65,7 +65,7 @@ The programming assignment involves working through a section of the [Online Exp
 - *Technical content:* more jsPsych and javascript basics
 - [Reading](oels_reading_wk2.md)
 - [Programming task](oels_practical_wk2.md)
-- [Lecture slides](oels_lecture_wk2.pdf)
+- [Lecture slides](slides/oels_lecture_wk2.pdf)
 
 
 ### Week 3 (5th October): Grammaticality judgements

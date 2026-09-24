@@ -65,6 +65,7 @@ The programming assignment involves working through a section of the [Online Exp
 - *Technical content:* more jsPsych and javascript basics
 - [Reading](oels_reading_wk2.md)
 - [Programming task](oels_practical_wk2.md)
+- [Lecture slides](oels_lecture_wk2.pdf)
 
 
 ### Week 3 (5th October): Grammaticality judgements
@@ -73,7 +74,6 @@ The programming assignment involves working through a section of the [Online Exp
 - *Technical content:* simple key- and button-press responses
 - [Reading](oels_reading_wk3.md)
 - [Programming task](oels_practical_wk3.md)
-<!--Practical: same as usual, simple html with key-press. Code update complete, notes complete.-->
 
 ### Week 4 (12th October): No class!
 

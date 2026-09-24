@@ -72,6 +72,7 @@ The programming assignment involves working through a section of the [Online Exp
 - *Scientific content:* lab vs online grammaticality judgments; syntactic processing and acceptability
 - *Technical content:* simple key- and button-press responses
 - [Reading](oels_reading_wk3.md)
+- [Programming task](oels_practical_wk3.md)
 <!--Practical: same as usual, simple html with key-press. Code update complete, notes complete.-->
 
 ### Week 4 (12th October): No class!

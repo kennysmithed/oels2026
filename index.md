@@ -86,6 +86,7 @@ Use this time to catch up or read ahead.
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, nested timelines, simple text surveys
 - [Reading](oels_reading_wk5.md)
+- [Programming task](oels_practical_wk5.md)
 <!--Reading and practical: the usual, but need to take account of reversed order. maybe include a running score on correctness, to use trial data again?-->
 
 

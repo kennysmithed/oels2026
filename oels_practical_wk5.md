@@ -238,7 +238,7 @@ var spr_trial_1 = {
   type: jsPsychHtmlKeyboardResponse,
   choices: [" "],
   timeline: [
-    ...same as before for self-paced reading trials
+    //...same as before for self-paced reading trials
     {
       stimulus: "Did the reporter see what happened?",
       prompt: "<p><em>Answer y or n</em></p>",
@@ -256,7 +256,7 @@ var spr_trial_1 = {
   type: jsPsychHtmlKeyboardResponse,
   choices: [" "],
   timeline: [
-    ...same as before for self-paced reading trials
+    //...same as before for self-paced reading trials
     {
       stimulus: "Did the reporter see what happened?",
       prompt: "<p><em>Answer y or n</em></p>",
@@ -274,7 +274,7 @@ var spr_trial_1 = {
 };
 ```
 
-In a little more detail, what that `on_finish` code says is: hey, I'm gong to pass you the trial data for the trial the participant just completed, which I am calling `data`. Look at the `response` field of `data` (that's what `data.response` does)m and if the response is `"n"` (which is the correct response for this comprehension question), set the `score` in the `data` to 1. Otherwise, set it to 0. This uses the syntax (`if` ... `else`) for conditionals that we saw in week 2, you can refresh your memory on that if you like, in [section 05 of the Online Experiments with jsPsych tutorial](https://softdev.ppls.ed.ac.uk/online_experiments/05_javascript.html).
+In a little more detail, what that `on_finish` code says is: hey, I'm gong to pass you the trial data for the trial the participant just completed, which I am calling `data`. Look at the `response` field of `data` (that's what `data.response` does) and if the response is `"n"` (which is the correct response for this comprehension question), set the `score` in the `data` to 1. Otherwise, set it to 0. This uses the syntax (`if` ... `else`) for conditionals that we saw in week 2, you can refresh your memory on that if you like, in [section 05 of the Online Experiments with jsPsych tutorial](https://softdev.ppls.ed.ac.uk/online_experiments/05_javascript.html).
 
 Looking at participants' responses, scoring them, and even sometimes doing something different on the next trial based on their response is a very useful tool when building interesting experiments, so we'll see a lot more of this kind of thing, starting next week!
 

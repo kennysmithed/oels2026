@@ -7,7 +7,7 @@ description: Some thoughts on how you could code up a maze task
 
 In the practical I set the following problem - note that it's marked as optional!
 
-- [- [Optional] An alternative to self-paced reading is the Maze task (e.g. Forster et al., 2009; Boyce et al., 2020); like self-paced reading your participants work through a sentence word by word, but unlike in self-paced reading at each step they chose one of two continuations for the sentence (see image below from Boyce et al., 2020 - G-Maze refers to mazes where the distractors are English words which would be ungrammatical continuations, L-maze has non-word distractors). Can you convert the self-paced reading code to run as a maze task? For each word presentation you will need an alternative continuation, and some way of the participant selecting their continuation (e.g. keyboard? button?). Maze tasks also don't feature comprehension questions so you can drop those (the idea is that selecting the correct continuation throughout shows you are paying attention). Mazes also abort the sentence when the participant makes a mistake - we haven't covered this yet and it is tricky to implement, so I would suggest skipping this feature of the maze for now, but is possible using `on_finish` and `jsPsych.abortCurrentTimeline` (see explanation and example in [core jsPsych documentation](https://www.jspsych.org/v8/reference/jspsych/). If you decide to have a go at this task, you can then take a look at [my thoughts on how it could be done](oels_practical_wk5_maze.md).
+- [Optional] An alternative to self-paced reading is the Maze task (e.g. Forster et al., 2009; Boyce et al., 2020); like self-paced reading your participants work through a sentence word by word, but unlike in self-paced reading at each step they chose one of two continuations for the sentence (see image below from Boyce et al., 2020 - G-Maze refers to mazes where the distractors are English words which would be ungrammatical continuations, L-maze has non-word distractors). Can you convert the self-paced reading code to run as a maze task? For each word presentation you will need an alternative continuation, and some way of the participant selecting their continuation (e.g. keyboard? button?). Maze tasks also don't feature comprehension questions so you can drop those (the idea is that selecting the correct continuation throughout shows you are paying attention). Mazes also abort the sentence when the participant makes a mistake - we haven't covered this yet and it is tricky to implement, so I would suggest skipping this feature of the maze for now, but is possible using `on_finish` and `jsPsych.abortCurrentTimeline` (see explanation and example in [core jsPsych documentation](https://www.jspsych.org/v8/reference/jspsych/). If you decide to have a go at this task, you can then take a look at [my thoughts on how it could be done](oels_practical_wk5_maze.md).
 
 ![mazes](images/mazes.jpg)
 
@@ -47,7 +47,21 @@ You can download all the code for this implementation through the following two 
 
 # Option 2: button response
 
-The other obvious way to get responses is through button-press, in which case it makes sense to put the possible continuations on the buttons. jsPsych will complain if we don;t have a `stimulus`, so we'll put the instruction in the stimulus rather than the prompt. Another option would be a blank stimulus and the instruction in the prompt. 
+The other obvious way to get responses is through button-press, in which case it makes sense to put the possible continuations on the buttons. jsPsych will complain if we don't have a `stimulus`, so we'll put the instruction in the stimulus rather than the prompt. Another option would be a blank stimulus and the instruction in the prompt. 
+
+```js
+var maze_trial_1 = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: "<em>Select a continuation</em>",
+  timeline: [
+    { choices: ["The", "x-x-x"] },
+    { choices: ["dog", "thon"] },
+    { choices: ["pirths", "chased"] },
+    { choices: ["swax", "the"] },
+    { choices: ["cat.", "yits."] },
+  ]
+};
+```
 
 You can download all the code for this implementation through the following two links:
 - <a href="code/maze/maze_button.html" download> Download maze_button.html</a>
@@ -55,8 +69,7 @@ You can download all the code for this implementation through the following two 
 
 ## References
 
-[Boyce, V., Futrell, R., & Levy, R. P. (2020). Maze Made Easy: Better and easier measurement of incremental processing difficulty.
-*Journal of Memory and Language, 111,* 104082.](https://doi.org/10.1016/j.jml.2019.104082)
+[Boyce, V., Futrell, R., & Levy, R. P. (2020). Maze Made Easy: Better and easier measurement of incremental processing difficulty. *Journal of Memory and Language, 111,* 104082.](https://doi.org/10.1016/j.jml.2019.104082)
 
 [Forster, K. I., Guerrera, C., & Elliot, L. (2009). The maze task: Measuring forced incremental sentence processing time.
 *Behavior Research Methods, 41,* 163-171.](https://doi.org/10.3758/BRM.41.1.163)

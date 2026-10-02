@@ -83,7 +83,6 @@ Use this time to catch up or read ahead.
 ### Week 5 (19th October): Self-paced reading
 
 **NB the lab this week is in room G.06, 50 George Square.**
-
 - *Scientific content:* processing costs of syntactic dependencies
 - *Technical content:* collecting reaction time data, nested timelines, simple text surveys
 - [Reading](oels_reading_wk5.md)
@@ -94,7 +93,6 @@ Use this time to catch up or read ahead.
 ### Week 6 (26th October): Word learning 
 
 **NB the lab this week is in room G.06, 50 George Square.**
-
 - *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
 - *Technical content:* nested timelines again, accessing trial data, saving data
 <!--Reading: Chua and Pan (2026)-->

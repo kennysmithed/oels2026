@@ -74,6 +74,7 @@ The programming assignment involves working through a section of the [Online Exp
 - *Technical content:* simple key- and button-press responses
 - [Reading](oels_reading_wk3.md)
 - [Programming task](oels_practical_wk3.md)
+- [Lecture slides](slides/oels_lecture_wk3.pdf)
 
 ### Week 4 (12th October): No class!
 

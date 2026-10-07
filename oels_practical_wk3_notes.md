@@ -225,8 +225,8 @@ And we also have to edit the `grammaticality_judgments.html` file to load this p
 ```
 
 For a full working example download these two files and stick them in your `grammaticality_judgments` folder - note that `grammaticality_judgments_instructions.html` loads `grammaticality_judgments/grammaticality_judgments_instructions.js`:
-- <a href="code/grammaticality_judgments/grammaticality_judgments_instructions.html" download> Download grammaticality_judgments_surveytext.html</a>
-- <a href="code/grammaticality_judgments/grammaticality_judgments_instructions.js" download> Download grammaticality_judgments_surveytext.js</a>
+- <a href="code/grammaticality_judgments/grammaticality_judgments_instructions.html" download> Download grammaticality_judgments_instructions.html</a>
+- <a href="code/grammaticality_judgments/grammaticality_judgments_instructions.js" download> Download grammaticality_judgments_instructions.js</a>
 
 ### [More challenging] Sprouse (2011) actually uses a rather different layout and type of response: he has participants enter a numerical value for each sentence, has multiple judgments presented on a single page, and provides a reference sentence (e.g. an example sentence which should receive a score of 100) at the top of each page. Can you replace our simple yes/no judgment trials with something more like what Sprouse did, using the jsPsych [survey-text plugin](https://www.jspsych.org/v8/plugins/survey-text/)?
 

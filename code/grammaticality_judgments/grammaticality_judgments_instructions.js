@@ -1,22 +1,7 @@
-/*
-This is a javascript block comment - the interpreter ignores this stuff, it's for
-you to read, although note that anyone looking at the source code of your experiment
-will see these comments, including any curious participants!
-*/
-
-// Individual lines can be commented out like this.
 
 /******************************************************************************/
 /*** Initialise jspsych *******************************************************/
 /******************************************************************************/
-
-/* 
-Nothing fancy going on in here, except that on_finish (so after the final trial 
-in the experiment) we use a built-in function to dump the raw data on the screen. 
-Obviously you wouldn't do this with a real experiment, and we will show you how 
-to save data in a subsequent example, but this at least allows you to see what 
-the data looks like behind the scenes.
-*/
 
 var jsPsych = initJsPsych({
   on_finish: function () {
@@ -27,20 +12,6 @@ var jsPsych = initJsPsych({
 /******************************************************************************/
 /*** Judgment trials **********************************************************/
 /******************************************************************************/
-
-/*
-Next we lay out the critical trials.
-These are type: jsPsychHtmlKeyboardResponse, because we are going to show the participant
-some text on screen and then ask them to press a button.
-stimulus is the sentence they will see.
-choices are the keyboard responses that will be accepted - only the y or n keys
-The prompt reminds them what to do on each trial. We use a little bit of html
-formatting in the prompt so it appears in italics (that's what the <em> and </em>
-tags do) and vertically separated (in its own paragraph, using the <p> tags),
-so make it stand out from the stimulus sentence.
-
-We just have 4 judgment trials here, obviously a real experiment would typically have more!
-*/
 
 //Filler sentence, grammatical
 var judgment_trial_1 = {
@@ -84,7 +55,7 @@ var judgment_trial_4 = {
 
 /*
 This is the new code, using the jsPsychInstructions plugin. The pages parameter
-is a list (array) of hjtml strings, where each string is a single instructions page. 
+is a list (array) of html strings, where each string is a single instructions page. 
 I just copied these from the `grammaticality_judgments.js` code, so each one is 
 quite long and has a bunch of formatting.
 */
@@ -157,8 +128,5 @@ var full_timeline = [
   final_screen,
 ];
 
-/*
-Call jsPsych.run to run the timeline we have created.
-*/
 
 jsPsych.run(full_timeline);

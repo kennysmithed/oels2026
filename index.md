@@ -84,7 +84,7 @@ Use this time to catch up or read ahead.
 
 **NB the lab this week is in room G.06, 50 George Square.**
 - *Scientific content:* processing costs of syntactic dependencies
-- *Technical content:* collecting reaction time data, nested timelines, simple text surveys
+- *Technical content:* collecting reaction time data, accessing trial data, nested timelines, simple text surveys
 - [Reading](oels_reading_wk5.md)
 - [Programming task](oels_practical_wk5.md)
 <!--Reading and practical: the usual, but need to take account of reversed order. maybe include a running score on correctness, to use trial data again?-->
@@ -94,8 +94,8 @@ Use this time to catch up or read ahead.
 
 **NB the lab this week is in room G.06, 50 George Square.**
 - *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
-- *Technical content:* nested timelines again, accessing trial data, saving data
-<!--Reading: Chua and Pan (2026)-->
+- *Technical content:* nested timelines again, accessing trial data again, saving data
+- [Reading](oels_reading_wk6.md)
 <!--Practical: simple html-button response, saving data at end, simple uses of trial data-->
 
 ### Week 7 (2nd November): Frequency learning

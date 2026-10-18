@@ -87,6 +87,7 @@ Use this time to catch up or read ahead.
 - *Technical content:* collecting reaction time data, accessing trial data, nested timelines, simple text surveys
 - [Reading](oels_reading_wk5.md)
 - [Programming task](oels_practical_wk5.md)
+- [Lecture slides](slides/oels_lecture_wk5.pdf)
 <!--Reading and practical: the usual, but need to take account of reversed order. maybe include a running score on correctness, to use trial data again?-->
 
 

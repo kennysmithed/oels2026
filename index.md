@@ -24,6 +24,9 @@ There will also be extra drop-in labs available in the run-up to the final assig
 
 Lectures and labs are both essential to doing well on the course - the assessment involves an understanding both of the literature on online experiments (covered in the readings and lectures) and the practicalities of how to build them (covered in your own work on the practicals, with support available in the labs). **Attendance will be taken in labs.**
 
+## Kenny's office hour (new, from 22nd October to end of semester)
+
+**If you are behind on the programming tasks and require extra help**, I am available in my office (room 1.08, Dugald Stewart Building) from 10-11am on Thursdays, you can come along and I'll help you out. If you can't make this time due to a course clash, email me and we can find another ad-hoc time.
 
 ## Assessment
 

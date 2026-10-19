@@ -97,6 +97,7 @@ Use this time to catch up or read ahead.
 - *Scientific content:* vocabulary learning via reading versus guessing-with-feedback
 - *Technical content:* nested timelines again, accessing trial data again, saving data
 - [Reading](oels_reading_wk6.md)
+- [Programming task](oels_practical_wk6.md)
 <!--Practical: simple html-button response, saving data at end, simple uses of trial data-->
 
 ### Week 7 (2nd November): Frequency learning

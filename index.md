@@ -114,18 +114,21 @@ Use this time to catch up or read ahead.
 
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Preloading stimuli, image buttons, saving data trial by trial
+- [Reading](oels_reading_wk8.md)
 <!--Reading and practical: the usual, but need to take account of changed order-->
 
 ### Week 9 (16th November): Priming
 
-- *Scientific content:* syntactic priming and alignment
+- *Scientific content:* priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, reading trial lists from CSV
-<!--Classic Branigan et al paper, and write up the thing I did in the blog post / as a tech report?-->
+- [Reading](oels_reading_wk9.md)
+<!--For next year - I would love to set them the classic Branigan et al paper, and write up the thing I did in the blog post / as a tech report?-->
 
 ### Week 10 (23rd November): Iterated Learning
 
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
+- [Reading](oels_reading_wk10.md)
 <!--The usual-->
 
 

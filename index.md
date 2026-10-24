@@ -24,7 +24,7 @@ There will also be extra drop-in labs available in the run-up to the final assig
 
 Lectures and labs are both essential to doing well on the course - the assessment involves an understanding both of the literature on online experiments (covered in the readings and lectures) and the practicalities of how to build them (covered in your own work on the practicals, with support available in the labs). **Attendance will be taken in labs.**
 
-## Kenny's office hour (new, from 22nd October to end of semester)
+## Kenny's office hour (new, from 22nd October to 10th December)
 
 **If you are behind on the programming tasks and require extra help**, I am available in my office (room 1.08, Dugald Stewart Building) from 10-11am on Thursdays, you can come along and I'll help you out. If you can't make this time due to a course clash, email me and we can find another ad-hoc time.
 
@@ -135,7 +135,7 @@ Use this time to catch up or read ahead.
 
 ### Week 11 (30th November): Interacting with MTurk
 
-No lecture or lab in week 10, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
+No lecture or lab in week 11, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
 - *Scientific content:* None!
 - *Technical content:* How to set up a server, launch and pay participants, manage qualifications, etc
@@ -152,8 +152,15 @@ I am sticking some extra documented experiments I have created here, in case the
 
 ### Additional drop-in labs for coding help with the final assignment
 
-We will provide some extra drop-in labs after the conclusion of the regular lectures and labs to give you an opportunity to get some help with your final assignment code. Obviously we won't write your code for you, but if you are having trouble interpreting an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. Note that these are not compulsory, and they are drop-ins not extra labs - the idea is that you come along, ask a couple of questions, then go away. 
-- **Times and dates in late November/early December TBC**
+We will provide some extra drop-in labs after the conclusion of the regular lectures and labs to give you an opportunity to get some help with your final assignment code. Obviously we won't write your code for you, but if you are having trouble interpreting an error message or finding a bug or want some tips on how to achieve a particular effect we can help you figure it out. Note that these are not compulsory, and **they are drop-ins not extra labs** - the idea is that you come along, ask a couple of questions, then go away, and I deal with you in the order you turn up for the time I have available. These are all in Kenny's office (DSB 1.08) unless otherwise stated.
+- Wednsday 25th November, 1pm-3pm
+- Thursday 26th November, 10am-11am (the usual office hour)
+- Monday 30th November, 10am-11am
+- Wednesday 2nd December, 9am-11am, **MBA Suite, Business School**
+- Thursday 3rd December, 10am-11am (the usual office hour)
+- Monday 7th December, 10am-11am
+- Monday 7th December, 2pm-4pm
+
 
 ## Re-use
 

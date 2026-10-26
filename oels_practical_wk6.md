@@ -46,7 +46,7 @@ As you hopefully figured out when you were trying to build it yourself, the main
 The experiment features 4 main trial types:
 
 - Guess-and-feedback trials: the participant sees an image and guesses the label, from a set of 4 options. 
-They then see feedback showing the image and the correct label. *This looks like a reading trial.*
+They then see feedback showing the image and the correct label. *This feedback part looks like a reading trial.*
 - Reading trials: the participant sees an image and the correct label, but they don't have to respond. *This looks like the feedback part of a guess-and-feedback trial.*
 - Multiple choice critical test trials: the participant sees an image and guesses the label, from a set of 4 options. There is no feedback. *This looks like the guess part of a guess-and-feedback trial.*
 - Cued recall critical test trials: the participant sees an image and a cue (e.g. "?-bridge") and types in the label. *This is quite different from the other trial types.*
@@ -98,7 +98,7 @@ That will do the job, and if I inserted these two trials one after the other in 
 ```js
 var guess_truck_camion = {
   type: jsPsychImageButtonResponse,
-  stimulus: "images/PICTURE_535.jpg", //this stimulus will be shown for every trial in the nested timeline
+  stimulus: "images/PICTURE_535.jpg", //this stimulus shown for every trial 
   timeline: [
     {
       //guessing trial - choose the word
@@ -431,7 +431,8 @@ Attempt these problems. After the practical you will be able to consult [some no
 - Run the code on the server once and look at the `wordlearning_data.csv` file to make sure it makes sense to you. If you have already run the code several times that file might be quite messy, in which case you can delete it and run the code again to get a cleaner view. 
 - Run the code several times and look at the `wordlearning_data.csv` file - you might have to refresh it on cyberduck to see the latest data. Make sure you understand what happens to this data file every time you run the code. If you had multiple participants doing this experiment, what would you *like* to happen (to make your life easy in deadling with your experiment data), and how would you achieve that? You don't have to write any code, just think about the outcome you would like to achieve and what it would require.
 - How would you add extra trials to this code, i.e. additional training and testing trials? You can hunt about in the `images` folder, in conjunction with a translation app or an English-Spanish dictionary, to get some inspiration for Spanish words to use in training and testing.
-- This code actually implements Experiment 2 of Chua & Pan (2026), where participants receive multiple-choice and cued-recall critical tests in blocks (all of one test type, then all of the other). How would you implement the version of the experiment where the critical test types are randomly intermingled?
+- This code actually implements Experiment 4 of Chua & Pan (2026), where participants receive multiple-choice and cued-recall critical tests in blocks (all of one test type, then all of the other). How would you implement the version of the experiment where the critical test types are randomly intermingled?
+- In the guess part of our guess-and-feedback trials, participants have unlimited time to respond. How would you include a time-limit, e.g. 8 seconds as implemented by Chua & Pan? 
 - It's possible to *filter* the data before saving it, e.g. grabbing only the trials where we marked `{exp_trial_type: "guess"}` or `{exp_trial_type: "reading"}` etc - this is explained in Section 06 of Alisdair's tutorial, or you can look at [the jsPsych documentation on aggregating and manipulating data](https://www.jspsych.org/v8/overview/data/#aggregating-and-manipulating-jspsych-data). Can you figure out how to change the `on_finish` for `initJsPsych` so that it only saves the data from "interesting" trials to the server?
 - How would you start to change this code to implement the word-to-image version of the experiment, rather than the image-to-word version? Think about what you would need to change conceptually to achieve this, and then [optional, challenging!] whether you can find a way using techniques you have seen today to achieve this - we'll come back to this next week!
 

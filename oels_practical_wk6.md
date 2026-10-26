@@ -342,7 +342,7 @@ var guess_truck_camion = {
       },
     },
     {
-      //feedback trial - see the correct word, no response possible!
+      //feedback trial - as before
       ...
     },
   ],
@@ -352,12 +352,12 @@ var guess_truck_camion = {
 In the `on_finish` we work through the following steps:
 - we look at `data.response` which gives us the button index of the response. We store this in a new variable called `button_number` for convenience.
 - we can now use `data.choices` and `button_number` to work out the label on the button the participant clicked - `data.choices[button_number]` is the javascript code to retrieve the item at `button_number` from the list `data.choices`. We store this in a new variable called `word_selected` for convenience.
-- We store that `word_selected` in the trial data, with the line `data.response_word = word_selected;` - now there will be a column in our data frame called `response_word` that includes the word the participant selected, much more useful than just the button index!
+- We store that `word_selected` in the trial data, with the line `data.response_word = word_selected;` now there will be a column in our data frame called `response_word` that includes the word the participant selected, much more useful than just the button index!
 - Finally we use an `if ... then` conditional to score the trial: if `word_selected` is the same as `data.correct_word` we score the trial as correct, and add `score=1` to the trial data.
 
 That's it for scoring these multiple-choice trials - and we can do the same in the multiple choice critical test trials.
 
-Scoring the free-test cued recall test trials works in a similar way. We don't have to save the order of the buttons, because there are none, but we do have to dig a little bit into the trial `data` to get out the participant's resopnse - `survey-text` trials might potentially have multiple questions, so the `response` data they generate includes a list of responses rather than a single response. Here's the code:
+Scoring the free-test cued recall test trials works in a similar way. We don't have to save the order of the buttons, because there are none, but we do have to dig a little bit into the trial `data` to get out the participant's response - `survey-text` trials might potentially have multiple questions, so the `response` data they generate includes a list of responses rather than a single response. Here's the code:
 
 ```js
 var critical_test_cr_truck_camion = {
@@ -405,13 +405,13 @@ When our participant finishes the experiment we want to save their data, so we a
         <script src="word_learning_image_to_word.js"></script>
 ```
 
-That `utilities.js` file includes a function called `save_data` (copied directly from section 06 of Alisdair's tutorial code) that we will use to save data - since it's a function we use with every experiment and it's basically always the same it makes sense to me to separate it off and save it in a file I can treat as a black box and forget about. The `save_data` function in turn relies of some other (very complicated!) code to safely save the data on the server, and avoid naughty people on the internet writing other kinds of unwanted information on the server - this code is written in another different language called PHP, and is in the file `save_data.php`. You definitely don't need to worry about the details of the code in this file but you do need to make one tiny edit, so that it save data in *your* `server_data` directory. So open `save_data.php` in your usual code-editor, jump to line 9:
+That `utilities.js` file includes a function called `save_data` (copied directly from section 06 of Alisdair's tutorial code) that we will use to save data - since it's a function we use with every experiment and it's basically always the same it makes sense to me to separate it off and save it in a file I can treat as a black box and forget about. The `save_data` function in turn relies of some other (very complicated!) code to safely save the data on the server, and avoid naughty people on the internet writing other kinds of unwanted information on the server - this code is written in another different language called PHP, and is in the file `save_data.php`. You definitely don't need to worry about the details of the code in this file but you do need to make one tiny edit, so that it saves data in *your* `server_data` directory. So open `save_data.php` in your usual code-editor, jump to line 9:
 
 ```php
 $dataDir = '/home/ksmith7/server_data'; //replace with your own UUN!
 ```
 
-and swap my UUN (ksmith7) for yours. Save that, close the file, and you are done. 
+and swap my UUN (ksmith7) for yours. Save that, close the file, and you are done. If you were using this code on a different server (ie. not jspsychlearning) you would also have to edit line 4, which is a check that the data is coming from the expected server.
 
 Now we have the infrastructure in place, we can tell our experiment code to save the data. For now we are going to save the data at the end of the experiment - it's better to save data trial-by-trial, and we'll cover that eventually, but this is a simpler place to start. So using the `on_finish` parameter of `initJsPsych`, right at the top of the code, we are going to save the data generated by the experiment to a csv file on the server. There are three new lines of code to do that.
 

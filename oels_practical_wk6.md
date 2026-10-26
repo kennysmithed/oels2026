@@ -119,7 +119,7 @@ We are going to return to this implementation later, to add some data annotation
 
 ### Implementing reading trials
 
-Implementing the guess-and-feedback trials actually solves several other problems for us, because the sub-parts of the guess-and-feedback trials look like the multiple-choice critical test and reading trials respectively. So for the reading trials (the "other" kind of passive training trial), all we need to do is show the image and Spanish word for a fixed duration, and our feedback trial above does exactly that. So we can just reuse that code!
+Implementing the guess-and-feedback trials actually solves several other problems for us, because the sub-parts of the guess-and-feedback trials look like the multiple-choice critical test and reading trials respectively. So for the reading trials (the "other" kind of training trial), all we need to do is show the image and Spanish word for a fixed duration, and our feedback trial above does exactly that. So we can just reuse that code!
 
 ```js
 var reading_ear_oreja = {
@@ -148,7 +148,7 @@ jsPsych.run(full_timeline);
 
 ### Implementing multiple-choice critical test trials
 
-After the training phase, the participants go through two tests to assess what they have learned: a multiple-choice test, and a cued recall test. The multiple choice test involves showing them an image and having them select the appropriate Spanish word from 4 options - and again, we have already implemented this for the guess part of guess-and-feedback trials, so we can just re-use that implementation.
+After the training phase, the participants go through two tests to assess what they have learned: a multiple-choice test, and a cued recall test. The multiple choice test involves showing them an image and having them select the appropriate Spanish word from several options (6 in the Chua & Pan paper, 4 here to make life easier) - and again, we have already implemented this for the guess part of guess-and-feedback trials, so we can just re-use that implementation.
 
 ```js
 var critical_test_mc_truck_camion = {
@@ -178,7 +178,7 @@ var full_timeline = [
 
 ### Implementing cued recall critical test trials
 
-The cued recall tests are a bit trickier to implement, because there's not a perfectly-matching jsPsych plugin (as far as I can see) - but we can get the effect we want with a little bit of trickery. The key thing here is the response - we want a text-box response where the participant types the correct label, which means we will end up using some kind of survey plugin, which is the easiest way to achieve this. The `survey-text` plugin we used last week for simple demographic questions actually provides this functionality. But then the other parts of the trial pose a bit of a problem - if I consult Figure 2 in Chua & Pan (2026) it looks like I want an image plus some text (including the English word) above the text box. How to achieve this using the `survey-text` plugin?
+The cued recall tests are a bit trickier to implement, because there's not a perfectly-matching jsPsych plugin (as far as I can see) - but we can get the effect we want with a little bit of trickery. The key thing here is the response - we want a text-box response where the participant types the correct label, which means we will end up using some kind of survey plugin, which is the easiest way to achieve this. The `survey-text` plugin we used last week for simple demographic questions actually provides this functionality. But then the other parts of the trial pose a bit of a problem - if I consult Figure 2 in Chua & Pan (2026) it looks like I want an image plus some text (including the English word) above the text response box. How to achieve this using the `survey-text` plugin?
 
 A quick look at [the plugin documentation](https://www.jspsych.org/v8/plugins/survey-text/) and the associated demo provides some inspiration. As we saw last week, the `survey-text` plugin allows us to present a list of questions, and for each question we can specify a `prompt` which will appear above the text box. So we could easily stick our English label in there. But how do we include the image too? The examples in the plugin documentation show a case where an image is included in the `preamble` (a bit of HTML that appears before the list of questions) using an `<img>` tag, so we could just copy that:
 
@@ -194,7 +194,7 @@ var critical_test_cr_truck_camion = {
 };
 ```
 
-That is what I tried first when I was implementing this myself and it actually works, but it looks a little weird, because there's a big gap between the `preamble` and the single question `prompt`. So I experimented with just sticking the image in the `prompt`, which also works and looks a little better, so that's what I went with - the only extra trick is to add a `<p>` pargrapg tag around the text so that it appears on a seperate line below the image.
+That is what I tried first when I was implementing this myself and it actually works, but it looks a little weird, because there's a big gap between the `preamble` and the single question `prompt`. So I experimented with just sticking the image in the `prompt`, which also works and looks a little better, so that's what I went with - the only extra trick is to add a `<p>` paragraph tag around the text so that it appears on a separate line below the image.
 
 ```js
 var critical_test_cr_truck_camion = {
@@ -262,7 +262,7 @@ Prior to adding code to mess with `data`, our code for one of these trials looks
 ```js
 var guess_truck_camion = {
   type: jsPsychImageButtonResponse,
-  stimulus: "images/PICTURE_535.jpg", //this stimulus will be shown for every trial in the nested timeline
+  stimulus: "images/PICTURE_535.jpg", //stimulus for every trial in nested timeline
   timeline: [
     {
       //guessing trial - choose the word
@@ -279,7 +279,7 @@ var guess_truck_camion = {
 };
 ```
 
-This code will produce a `data` object, but it's not very helpful - it includes the stimulus, and `data.response` includes a number giving the *index* of the button the participant clicked - 0 for the 1st button, 1 for the second button, and so on (javascript counts from 0 rather than 1!). Slightly weirdly in my opinion, jsPsych doesn't automatically record the `choices` parameter to `data`, so we would have to do some extra work to interpret `data.response` and score the trial. One option would be to just hard-wire in the correct response - here I can see that the correct response is the first button, so if `data.response` is 0 then they have clicked the correct button. But this approach is quite limited and will break when we want to *randomise* the button order, which we will do next week, so we'll do something more complex - we will save the `choices` to `data`, and a note of what the correct label on this trial is, then we'll score based on the choices, the response, and the information on the correct label.
+This code will produce a `data` object, but it's not very helpful - it includes the stimulus, and `data.response` includes a number giving the *index* of the button the participant clicked - 0 for the 1st button, 1 for the second button, and so on (javascript counts from 0 rather than 1!). Slightly weirdly in my opinion, jsPsych doesn't automatically record the `choices` parameter to `data`, so we would have to do some extra work to interpret `data.response` and score the trial. One option would be to just hard-wire in the correct response - here I can see that the correct response is the first button, so if `data.response` is 0 then they have clicked the correct button. But this approach is quite limited and will break when we want to *randomise* the button order, which we will do next week, so we'll do something more complex. We will save the `choices` to `data` (so we can see which button index correspnds to which word), and we will also make a note of what the correct label on this trial is. Then we'll score based on the choices, the response, and the correct label.
 
 The first step is to add some information to the trial `data`, which we do by initialising the trial data with an `exp_trial_type` and a note of the `correct_word`. We also use a built-in option provided by jsPsych to tell it to save the trial choices - the code that does this is `save_trial_parameters: { choices: true }` which tells it to save the choices parameter (and if there was another parameter you wanted to save, you could use the same method). Here's how those bits slot into our code.
 
@@ -294,20 +294,21 @@ var guess_truck_camion = {
       data: {
         //add some information to the data for this trial
         exp_trial_type: "guess", //mark this as a "guess" trial
-        correct_word: "camion", //and record the correct word (for comparison with what the participant selects)
+        correct_word: "camion", //and record the correct word (for comparison)
       },
-      save_trial_parameters: { choices: true }, //we need to save the trial choices so we can score the trial 
+      //we need to save the trial choices so we can score the trial 
+      save_trial_parameters: { choices: true }, 
       ...
     },
     {
-      //feedback trial - see the correct word, no response possible!
+      //feedback trial - as before
       ...
     },
   ],
 };
 ```
 
-Now when the participant finished the trial, the `data` object will include `data.response` (the index of the button the clicked), but also `data.choices` (the button labels, in the order the participants saw them) and `data.correct_label (the correct label obviously). Now we can score the trial, using `on_finish` in the same way as we did last week. Here's the code, I'll talk you through it below.
+Now when the participant finishes the trial, the `data` object will include `data.response` (the index of the button the clicked), but also `data.choices` (the button labels, in the order the participants saw them) and `data.correct_label` (the correct label, obviously). Now we can score the trial, using `on_finish` in the same way as we did last week. Here's the code, I'll talk you through it below.
 
 ```js
 var guess_truck_camion = {
@@ -325,10 +326,14 @@ var guess_truck_camion = {
       save_trial_parameters: { choices: true }, //we need to save the trial choices so we can score the trial 
       on_finish: function (data) {
         //at the end of the trial...
-        var button_number = data.response; //this is the *index* of the button they clicked
-        var word_selected = data.choices[button_number]; //look up that button in choices to see what word they clicked
-        data.response_word = word_selected; //record the word they clicked in the trial data
-        //then score the trial by comparing the word they selected with the correct word
+        //this is the *index* of the button they clicked
+        var button_number = data.response; 
+        //look up that button in choices to see what word they clicked
+        var word_selected = data.choices[button_number];
+        //record the word they clicked in the trial data
+        data.response_word = word_selected; 
+        //then score the trial by comparing 
+        //the word they selected with the correct word
         if (word_selected == data.correct_word) {
           data.score = 1;
         } else {

@@ -17,7 +17,7 @@ As with last week, we'd like to give you an opportunity to try to build (parts o
 
 You are actually going to need a bunch of files for this experiment - the html and javascript templates for your attempt (which we are calling `my_frequency_learning.html` and `my_frequency_learning.js`), the html and js file for our implementation (`frequency_learning.html` and `frequency_learning.js`), and a folder containing a bunch of images. Rather than downloading these separately, download the following zip file and then uncompress it into your usual jsPsych folder, in a folder called something like `frequency_learning`, alongside your other folders containing your other practical exercises. **Once you have created this code, you should copy in your `utilities.js` and `save_data.js` files from the last practical** - we are using the same code to save data at the end of the experiment, so you can copy exactly those files, and this saves you editing the `save_data.php` file again.
 
-- [Download frequency_learning.zip](code/frequency_learning.zip)
+- <a href="code/frequency_learning.zip" download> Download word_learning.zip</a>
 
 This code should run on your local computer, but you should upload the whole `frequency_learning` folder to the `public_html` folder on the jspsychlearning server and play with it there; the code that saves the data to the server will only work if your code is actually running on the jspsychlearning server 
 

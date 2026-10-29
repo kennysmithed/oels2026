@@ -15,13 +15,15 @@ There is quite a lot of new technical content this week, and an important concep
 
 As with last week, we'd like to give you an opportunity to try to build (parts of) this frequency learning experiment yourself. As with last week, to help you get started, we are going to provide you with a couple of templates to fill in - an html file that loads some of the plugins you will need (but once you decide what additional plugins you need you will have to load them too, e.g. by copying the appropriate script line from the plugin documentation), then a javascript file where you can put your own code. That javascript file includes some extra stuff (instructions, saving data to the server) that we pre-built for you so you can focus on the more interesting parts of the experiment. 
 
-You are actually going to need a bunch of files for this experiment - the html and javascript templates for your attempt (which we are calling `my_frequency_learning.html` and `my_frequency_learning.js`), the html and js file for our implementation (`frequency_learning.html` and `frequency_learning.js`), and a folder containing a bunch of images. Rather than downloading these separately, download the following zip file and then uncompress it into your usual jsPsych folder, in a folder called something like `frequency_learning`, alongside your other folders containing your other practical exercises. **Once you have created this code, you should copy in your `utilities.js` and `save_data.js` files from the last practical** - we are using the same code to save data at the end of the experiment, so you can copy exactly those files, and this saves you editing the `save_data.php` file again.
+You are actually going to need a bunch of files for this experiment - the html and javascript templates for your attempt (which we are calling `my_frequency_learning.html` and `my_frequency_learning.js`), the html and js file for our implementation (`frequency_learning.html` and `frequency_learning.js`), and a folder containing a bunch of images. Rather than downloading these separately, download the following zip file and then uncompress it into your usual jsPsych folder, in a folder called something like `frequency_learning`, alongside your other folders containing your other practical exercises. 
 
 - <a href="code/frequency_learning.zip" download> Download word_learning.zip</a>
 
+**Once you have created this folder and put the downloaded code in it, you should copy in your `utilities.js` and `save_data.js` files from the last practical** - we are using the same code to save data at the end of the experiment, so you can copy exactly those files.
+
 This code should run on your local computer, but you should upload the whole `frequency_learning` folder to the `public_html` folder on the jspsychlearning server and play with it there; the code that saves the data to the server will only work if your code is actually running on the jspsychlearning server 
 
-If you want to see what the finished experiment will look like, you can run the `frequency_learning.html` file which includes our final implementation - the URL will be https://jspsychlearning.ppls.ed.ac.uk/~UUN/online_experiments_practicals/frequency_learning/frequency_learning.html, or [you can run my copy on jspsychlearning](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/online_experiments_practicals/frequency_learning/frequency_learning.html). Remember that if you look at the data saved at the end that will include spoilers on how to write the code yourself, so depending on how much you want to challenge yourself you might want to avoid looking at the data for now! 
+If you want to see what the finished experiment will look like, you can run the `frequency_learning.html` file which includes our final implementation - the URL will be something like https://jspsychlearning.ppls.ed.ac.uk/~UUN/online_experiments_practicals/frequency_learning/frequency_learning.html, depending on the folder structure in your `public_html` folder, or [you can run my copy on jspsychlearning](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/online_experiments_practicals/frequency_learning/frequency_learning.html). Remember that if you look at the data saved at the end that will include spoilers on how to write the code yourself, so depending on how much you want to challenge yourself you might want to avoid looking at the data for now! 
 
 If you run through our implementation of the experiment you'll see that, in addition to the usual instructions, the experiment consists of two stages: *observation* and *production*.  Observation trials involve presentation of an object plus a label; production trials prompt the participant to select a label for an object. In a little more detail:
 
@@ -153,7 +155,8 @@ function make_observation_trial(object_filename, label) {
       },
       { prompt: label, 
         trial_duration: 2000, 
-        data: { block: "observation" },
+        data: { block: "observation" , 
+                label_observed: label },
       },
     ],
   };

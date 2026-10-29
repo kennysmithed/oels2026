@@ -21,9 +21,9 @@ You are actually going to need a bunch of files for this experiment - the html a
 
 **Once you have created this folder and put the downloaded code in it, you should copy in your `utilities.js` and `save_data.js` files from the last practical** - we are using the same code to save data at the end of the experiment, so you can copy exactly those files.
 
-This code should run on your local computer, but you should upload the whole `frequency_learning` folder to the `public_html` folder on the jspsychlearning server and play with it there; the code that saves the data to the server will only work if your code is actually running on the jspsychlearning server 
+This code should run on your local computer, but you should upload the whole `frequency_learning` folder to the `public_html` folder on the jspsychlearning server and play with it there; the code that saves the data to the server will only work if your code is actually running on the jspsychlearning server.
 
-If you want to see what the finished experiment will look like, you can run the `frequency_learning.html` file which includes our final implementation - the URL will be something like https://jspsychlearning.ppls.ed.ac.uk/~UUN/online_experiments_practicals/frequency_learning/frequency_learning.html, depending on the folder structure in your `public_html` folder, or [you can run my copy on jspsychlearning](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/online_experiments_practicals/frequency_learning/frequency_learning.html). Remember that if you look at the data saved at the end that will include spoilers on how to write the code yourself, so depending on how much you want to challenge yourself you might want to avoid looking at the data for now! 
+If you want to see what the finished experiment will look like, you can run the `frequency_learning.html` file which includes our final implementation, or [you can run my copy on jspsychlearning](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/online_experiments_practicals/frequency_learning/frequency_learning.html). Remember that if you look at the data saved at the end that will include spoilers on how to write the code yourself, so depending on how much you want to challenge yourself you might want to avoid looking at the data for now! 
 
 If you run through our implementation of the experiment you'll see that, in addition to the usual instructions, the experiment consists of two stages: *observation* and *production*.  Observation trials involve presentation of an object plus a label; production trials prompt the participant to select a label for an object. In a little more detail:
 
@@ -35,13 +35,11 @@ If you run through our implementation of the experiment you'll see that, in addi
 
 To implement your own observation and (simplified) production trials, you need to figure out what plugin(s) you need for observation and production trials (think about the stimulus and the response), then look at [the documentation](https://www.jspsych.org/v8/plugins/list-of-plugins/) for that plugin to see how to use it and/or edit previous bits of code you have written that do something similar. The novel-object images you need are in the folder `images`. Your code should go in `my_frequency_learning.html` and `my_frequency_learning.js`.
 
-Remember, it's OK to implement this in a very simple way, with a long manually-constructed trial list (which is probably a good way to start) - but if you want to use some of the ideas that were introduced last week (e.g. nested timelines) that's great too. Give it a go, see how you get on, and ask for help if/when you get stuck!
+Remember, it's OK to implement this in a very simple way, with a long manually-constructed trial list (which is probably a good way to start) - but if you want to use some of the ideas that were introduced in the last few weeks (e.g. nested timelines) that's great too. Give it a go, see how you get on, and ask for help if/when you get stuck!
 
 ## Walk-through of our implementation
 
-As you hopefully figured out when you were trying to build it yourself, the main part of the experiment uses the same `image-button-response` plugin as last week. We are going to add some extra machinery to randomise the placement of choices on-screen, and to allow the choices on one trial to depend on choices made at the previous trial (to get the click-to-confirm behaviour in production trials). 
-
-### Nested timelines again
+As you hopefully figured out when you were trying to build it yourself, the main part of the experiment uses the same `image-button-response` plugin as last week. We are going to add some extra machinery to randomise the order of choices on-screen, and to allow the choices on one trial to depend on choices made at the previous trial (to get the click-to-confirm behaviour in production trials). 
 
 Like in the self-paced reading and word-learning experiments from the past couple of weeks, individual trials in this frequency-learning experiment are somewhat complex - they involve a couple of steps - and we are going to use the same tool to simplify our code a bit, by using nested timelines. 
 
@@ -140,9 +138,7 @@ var observation_object4_buv= {
 
 For the second sub-trial I have also specified something for the `data` parameter - I am adding an extra `block` parameter and marking this trial as belonging to the `"observation"` block, so our observation trials will be easy to spot in the CSV data generated by the experiment. I am also adding a column called `label_observed` storing the actual label the participant saw, so that if necessary we can reconstruct their training data from their data file. We have used this same technique to annotate data in previous weeks.
 
-That's conceptually neater, and I could create more trials (e.g. for the same object using the "cal" label) by copying, pasting and editing, as we have seen before. But there's a more efficient way to do this. There's a really clear template for these observation trials: the ony thing that differs between observation trials is the **image filename** and the **label**, and everything else is identical. So I can write a function where I provide the image filename and the label to be used as the parameters to the function, and then the function returns a trial that it creates by plugging in those values to the template.
-
-Here's what the code to do this looks like, and I'll talk you through it below:
+That's conceptually neater, and I could create more trials (e.g. for the same object using the "cal" label) by copying this code, using it like a template, and changing the image filename and label each time. But everything else would stay the same. Creating a **function** lets us reuse that template. We give it an image filename and a label, and it creates a trial using those values. Here’s how we define the function:
 
 ```js
 function make_observation_trial(object_filename, label) {
@@ -166,17 +162,24 @@ function make_observation_trial(object_filename, label) {
 };
 ```
 
-This bit of code creates a function, called `make_observation_trial`. The function has two parameters (sometimes also called arguments), which allow is to specify the object filename and label when we call the function - these parameters are named `object_filename` and `label` in the code, and we can use those labels inside the function when we want to refer to the values that were passed in by the code calling the function. The function does the rest for us, creating a variable called `observation_trial` containing a complex trial, then crucially **returning** the trial it created. This is the crucial feature of functions: you specify the value for some parameters, the function return something (here, a trial) it created using those parameters, 
+This bit of code defines a function called `make_observation_trial`. Its two **parameters**, `object_filename` and `label`, are names for the values we will supply when we use it. Inside the function, we create a trial using those values. The line `return observation_trial;` gives the completed trial back to the code that called the function.
 
-O
-Now we can use this function to make some observation trials - in the code I make a 5-trial observation phase, where object4 is paired with two non-word labels, "buv" and "cal". The first step is to make those two trial types with the two different labels, using our new function; we create a couple of variables to store the trials created and returned by our new function.
+Defining the function doesn’t create any trials yet. To create one, we **call** the function: 
 
 ```js
 var observation_trial_object4_buv = make_observation_trial("images/object4.jpg", "buv");
+
+```
+
+In this call, `object_filename` gets the value "images/object4.jpg" and `label` gets the value "cal". The function creates a trial using those values, returns it, and we store it in `observation_trial_object4_buv`. We can call the same function again with different values to create another trial.
+
+```js
 var observation_trial_object4_cal = make_observation_trial("images/object4.jpg", "cal");
 ```
 
-We are going to need several of these trials in training - let's say I want 3 buvs and 2 cals. I could just do this manually, by including `observation_trial_object4_buv` `observation_trial_object4_cal` repeatedly in the experiment timeline, like this:
+Defining the function tells JavaScript how to make a trial. Calling the function asks it to make one. 
+
+We are going to need several of these trials in training - let's say I want 3 buvs and 2 cals. I could just do this manually, by including `observation_trial_object4_buv` and `observation_trial_object4_cal` repeatedly in the experiment timeline, like this:
 
 ```js
 var full_timeline = [

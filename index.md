@@ -110,7 +110,7 @@ Use this time to catch up or read ahead.
 - *Technical content:* randomisation of `choices`, using trial data for contingent trials, functions that create trials, repeating and randomising trials 
 - [Reading](oels_reading_wk7.md)
 - [Programming task](oels_practical_wk7.md)
-
+- [Lecture slides](slides/oels_lecture_wk7.pdf)
 
 ### Week 8 (9th November): Speech perception
 

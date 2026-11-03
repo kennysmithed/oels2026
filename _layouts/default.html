@@ -23,6 +23,13 @@
   
     <div class="wrapper">
 
+      <!-- Automatically generated navigation -->
+    <nav id="toc" aria-label="On this page">
+      <strong>On this page</strong>
+      <ul id="toc-list"></ul>
+    </nav>
+
+
       <section>
         <div id="title">
           <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
@@ -54,5 +61,9 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+
+
+    <!-- Generate the table of contents -->
+    <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
   </body>
 </html>

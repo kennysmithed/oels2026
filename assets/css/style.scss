@@ -1,0 +1,209 @@
+---
+---
+
+/* Load the original Midnight theme */
+@import "{{ site.theme }}";
+
+
+/* ==========================================
+   LEFT-HAND TABLE OF CONTENTS
+   ========================================== */
+
+#toc {
+  position: fixed;
+  top: 140px;
+  left: max(20px, calc((100vw - 1100px) / 2));
+  width: 200px;
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 15px;
+  box-sizing: border-box;
+
+  background: #202020;
+  border: 1px solid #383838;
+  border-radius: 6px;
+
+  font-size: 14px;
+  line-height: 1.5;
+  z-index: 10;
+}
+
+
+/* Navigation heading */
+
+#toc strong {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+
+/* Remove default list styling */
+
+#toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navigation entries */
+
+#toc li {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+
+/* Navigation links */
+
+#toc a {
+  display: block;
+  color: #cccccc;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+
+/* Hover effect */
+
+#toc a:hover,
+#toc a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   HEADING LEVELS
+   ========================================== */
+
+/* Level 1 headings */
+
+#toc .toc-h1 {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+
+/* Level 2 headings */
+
+#toc .toc-h2 {
+  padding-left: 12px;
+  font-size: 13px;
+}
+
+
+/* Level 3 headings */
+
+#toc .toc-h3 {
+  padding-left: 24px;
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   PAGE LAYOUT
+   ========================================== */
+
+/* On wide screens, move Midnight's main
+   content to the right to leave room
+   for the navigation menu. */
+
+@media screen and (min-width: 1100px) {
+
+  div.wrapper {
+    width: 800px;
+    max-width: calc(100% - 280px);
+    margin-left: max(260px, calc((100vw - 800px) / 2));
+    margin-right: 20px;
+  }
+
+  div.wrapper > section {
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+  }
+
+}
+
+
+/* ==========================================
+   SMALLER SCREENS
+   ========================================== */
+
+/* Hide the navigation on tablets and phones,
+   retaining Midnight's original layout. */
+
+@media screen and (max-width: 1099px) {
+
+  #toc {
+    display: none;
+  }
+
+}
+
+
+/* ==========================================
+   SMOOTH SCROLLING
+   ========================================== */
+
+/* Smoothly scroll when a navigation
+   link is clicked. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Leave a little space above headings
+   when scrolling to them. */
+
+section h1,
+section h2,
+section h3 {
+  scroll-margin-top: 100px;
+}
+
+
+/* ==========================================
+   EMPTY NAVIGATION
+   ========================================== */
+
+/* Hide navigation if the page contains
+   no suitable headings. */
+
+#toc[hidden] {
+  display: none;
+}
+
+
+/* ==========================================
+   PRINTING
+   ========================================== */
+
+/* Do not print the navigation menu. */
+
+@media print {
+
+  #toc {
+    display: none;
+  }
+
+  div.wrapper {
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  div.wrapper > section {
+    width: auto;
+    float: none;
+  }
+
+}

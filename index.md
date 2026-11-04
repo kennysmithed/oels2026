@@ -117,6 +117,7 @@ Use this time to catch up or read ahead.
 - *Scientific content:* speech perception, social influences on phonetic adaptation
 - *Technical content:* Preloading stimuli, image buttons, saving data trial by trial
 - [Reading](oels_reading_wk8.md)
+- [Programming task](oels_practical_wk8.md)
 <!--Reading and practical: the usual, but need to take account of changed order-->
 
 ### Week 9 (16th November): Priming

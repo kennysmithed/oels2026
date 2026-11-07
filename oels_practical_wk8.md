@@ -105,11 +105,12 @@ The `preamble` parameter provides formatted HTML text (using paragraph tags) tha
 This is a string (enclosed in double quotes) that includes some HTML markup tags. The simplest part of that is the bit of code that collects the age info:
 
 ```js
-"<p style='text-align:left'>What is your age? <br> \
+"<p style='text-align:left; padding-left: 40px; padding-right: 40px'>\
+    How old are you? <br> \
     <input required name='age' type='number'></p>"
 ```
 
-So it's a paragraph (enclosed in `<p> ... </p>`), and I have used `style='text-align:left'` to make it left-justified so it doesn't look too awful. There's a question ("What is your age?"), then a `<br>` tag, which produces a line break. Then `<input required name='age' type='number'>` creates an input field, which will be referred to as `age` in our code (that's how it appears in the results, as you will see if you run the experiment to the end and look at the on-screen data dump), and we tell it that this input is of the `number` type, which lets the browser know how to display it (e.g. if we swap `type='number'` for `type='text'` then you lose the little scroller to increase/decrease the number). The `required` flag means that this response has to be provided - your participants will not be allowed to progress unless they provide a response. Use the `required` tag sparingly - e.g. if you make an open-ended comment obligatory that is likely to annoy people.
+So it's a paragraph (enclosed in `<p> ... </p>`), and I have used `style='text-align:left; padding-left: 40px; padding-right: 40px'` to make it left-justified and offset a little from the page edges so it doesn't look too awful. There's a question ("How old are you?"), then a `<br>` tag, which produces a line break. Then `<input required name='age' type='number'>` creates an input field, which will be referred to as `age` in our code (that's how it appears in the results, as you will see if you run the experiment to the end and look at the on-screen data dump), and we tell it that this input is of the `number` type, which lets the browser know how to display it (e.g. if we swap `type='number'` for `type='text'` then you lose the little scroller to increase/decrease the number). The `required` flag means that this response has to be provided - your participants will not be allowed to progress unless they provide a response. Use the `required` tag sparingly - e.g. if you make an open-ended comment obligatory that is likely to annoy people.
 
 The other questions follow the same format, and each appears in its own paragraph and has its own `name` so that we can tell which number answers which question in the final data.
 
@@ -135,7 +136,7 @@ var dill_trial = {
 };
 ```
 
-That would play the sound file `picture_selection_sounds/fresh_dill.mp3` (note that we have to tell the code that this sound file can be found in the folder `picture_selection_sounds`), and give the participant two text-button options, "fresh_dill" and "dry_dill" (so no images yet). The order of those choices is fixed though - the correct response is on the left - and unless we want to manually randomise when constructing our trial list it might be wise to borrow some of the tricks from the word learning experiment and randomise the order of the buttons on every trial. We can do that in exactly the same way as in the word learning experiment: set the choices to an empty list initially, then fill it out by shuffling `["fresh_dill", "dry_dill"]` in the trial's `on_start`:
+That would play the sound file `picture_selection_sounds/fresh_dill.mp3` (note that we have to tell the code that this sound file can be found in the folder `picture_selection_sounds`), and give the participant two text-button options, "fresh_dill" and "dry_dill" (so no images yet). The order of those choices is fixed though - the correct response is on the left - and unless we want to manually randomise when constructing our trial list it might be wise to borrow some of the tricks from the frequency learning experiment and randomise the order of the buttons on every trial. We can do that in exactly the same way as in the word learning experiment: set the choices to an empty list initially, then fill it out by shuffling `["fresh_dill", "dry_dill"]` in the trial's `on_start`:
 
 ```js
 var dill_trial = {

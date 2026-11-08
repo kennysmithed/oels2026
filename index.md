@@ -126,7 +126,8 @@ Use this time to catch up or read ahead.
 - *Scientific content:* priming and overspecification
 - *Technical content:*  Audio recording, custom preload lists, reading trial lists from CSV
 - [Reading](oels_reading_wk9.md)
-<!--For next year - I would love to set them the classic Branigan et al paper, and write up the thing I did in the blog post / as a tech report?-->
+- [Programming task](oels_practical_wk9.md)
+<!--For next year - I would love to set them the classic Branigan et al paper, and write up the thing I did replicating it online in the blog post / as a tech report?-->
 
 ### Week 10 (23rd November): Iterated Learning
 

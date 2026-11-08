@@ -18,15 +18,15 @@ For this demo experiment we are using audio stims recorded by my RA Rachel Kinde
 
 As with last week, we'd like to give you an opportunity to try to build (parts of) this experiment yourself, and we'll provide you with a template that we pre-built for you so you can focus on the more interesting parts of the experiment.
 
-You need a bunch of files for this experiment - html and js files for several versions of the experiment, a new `utilities.js` file that includes code to save audio, an extra PHP script (for saving audio data), plus various folders containing images, sounds, trial lists etc. Again, rather than downloading them individually, download the following zip file: **NB code link not yet active**
-- <a href="code/confederate_priming.zip" download> Download confederate_priming.zip</a>
+You need a bunch of files for this experiment - html and js files for several versions of the experiment, a new `utilities.js` file that includes code to save audio, an extra PHP script (for saving audio data), plus various folders containing images, sounds, trial lists etc. Again, rather than downloading them individually, download the following zip file: 
+- <a href="code/confederate_priming.zip" download> Download confederate_priming.zip</a> **NB code link not yet active**
 
 As usual, extract this and copy the folder into your practicals folder on the jspsychlearning server - since data (including audio) won't save if you run it locally, by this point you really want to be running everything on the jspsychlearning server. Furthermore, there are a couple of things to note before you can run our implementation of the code:
 - You should copy your usual `save_data.php` script into the folder containing this code, to allow you to save trial data.
 - Our code will save audio files to a subfolder of `server_data` called `audio` - so you need to create that subfolder. You can create new folders in cyberduck quite easily, but you have to create this new folder in exactly the right way to make sure the folder permissions (rules about who can write to the folder) are set correctly, otherwise your audio may not save. Go to your `server_data` folder in cyberduck and go into the folder (i.e. double-click it) so your cyberduck window looks like this - note that my navigation bar shows me I am in `/home/ksmith7/server_data`, yours will show you as in `/home/UUN/server_data` depending on what your UUN is.
 ![cyberduck in server_data](images/create_audio_folder.png)
 Then click the "action" button (with the cog), select the "New folder..." option and call the new folder `audio` (with that exact name, i.e. lower-case first letter). That should create a folder in the correct place with the correct permissions!
-- Open save_data.php and edit the path on line **TODO** so it points to your `server_data` rather than mine. 
+- Open save_data.php and edit the path on line 9 so it points to your `server_data` rather than mine. 
 - You may need to use Chrome for the audio recording to work reliably - feel free to try out other browsers, but if the audio recording doesn't work, try it in Chrome first before seeking our help!
 
 If you run through our implementation of the experiment (on your server or using [my copy on jspsychlearning](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/online_experiments_practicals/confederate_priming/confederate_priming.html)) you'll see that the experiment consists of two trial types, which alternate:

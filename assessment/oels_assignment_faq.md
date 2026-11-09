@@ -35,6 +35,18 @@ Yes - but remember to explain why you are talking about them. For instance, for 
 
 Yes definitely!
 
+### Is the word limit for the annotated bibliography strict?
+
+Yes it is - we will stop reading if you go over the word limit.
+
+## Does the word limit for the annotated bibliography include the references section?
+
+No it doesn't - we don't want to penalise you for reading and citing lots of relevant work. You can also exclude the reference details for the 4 papers you are reviewing from the word count.
+
+## Does the word limit for the annotated bibliography include footnotes?
+
+Yes it does - I never want to read 5000 words of footnotes.
+
 ## Undergraduate Assessment 2 / Postgraduate Sole Assessment (Experiment plus report)
 
 ###  Once I have built my experiment, am I supposed to collect actual data from participants?

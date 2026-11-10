@@ -127,6 +127,7 @@ Use this time to catch up or read ahead.
 - *Technical content:*  Audio recording, custom preload lists, reading trial lists from CSV
 - [Reading](oels_reading_wk9.md)
 - [Programming task](oels_practical_wk9.md)
+- [Lecture slides](slides/oels_lecture_wk9.pdf)
 <!--For next year - I would love to set them the classic Branigan et al paper, and write up the thing I did replicating it online in the blog post / as a tech report?-->
 
 ### Week 10 (23rd November): Iterated Learning

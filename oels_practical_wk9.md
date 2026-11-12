@@ -19,7 +19,7 @@ For this demo experiment we are using audio stims recorded by my RA Rachel Kinde
 As with last week, we'd like to give you an opportunity to try to build (parts of) this experiment yourself, and we'll provide you with a template that we pre-built for you so you can focus on the more interesting parts of the experiment.
 
 You need a bunch of files for this experiment - html and js files for several versions of the experiment, a new `utilities.js` file that includes code to save audio, an extra PHP script (for saving audio data), plus various folders containing images, sounds, trial lists etc. Again, rather than downloading them individually, download the following zip file: 
-- <a href="code/confederate_priming.zip" download> Download confederate_priming.zip</a> **NB code link not yet active**
+- <a href="code/confederate_priming.zip" download> Download confederate_priming.zip</a> 
 
 As usual, extract this and copy the folder into your practicals folder on the jspsychlearning server - since data (including audio) won't save if you run it locally, by this point you really want to be running everything on the jspsychlearning server. Furthermore, there are a couple of things to note before you can run our implementation of the code:
 - You should copy your usual `save_data.php` script into the folder containing this code, to allow you to save trial data.

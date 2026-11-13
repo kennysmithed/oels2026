@@ -26,7 +26,7 @@ As usual, extract this and copy the folder into your practicals folder on the js
 - Our code will save audio files to a subfolder of `server_data` called `audio` - so you need to create that subfolder. You can create new folders in cyberduck quite easily, but you have to create this new folder in exactly the right way to make sure the folder permissions (rules about who can write to the folder) are set correctly, otherwise your audio may not save. Go to your `server_data` folder in cyberduck and go into the folder (i.e. double-click it) so your cyberduck window looks like this - note that my navigation bar shows me I am in `/home/ksmith7/server_data`, yours will show you as in `/home/UUN/server_data` depending on what your UUN is.
 ![cyberduck in server_data](images/create_audio_folder.png)
 Then click the "action" button (with the cog), select the "New folder..." option and call the new folder `audio` (with that exact name, i.e. lower-case first letter). That should create a folder in the correct place with the correct permissions!
-- Open save_data.php and edit the path on line 9 so it points to your `server_data` rather than mine. 
+- Open save_audio.php and edit the path on line 9 so it points to your account rather than mine. 
 - You may need to use Chrome for the audio recording to work reliably - feel free to try out other browsers, but if the audio recording doesn't work, try it in Chrome first before seeking our help!
 
 If you run through our implementation of the experiment (on your server or using [my copy on jspsychlearning](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/online_experiments_practicals/confederate_priming/confederate_priming.html)) you'll see that the experiment consists of two trial types, which alternate:
@@ -97,7 +97,7 @@ function random_wait() {
 
 Now we are in a position to start coding up our main trial types. We'll start with picture selection trials, which work in a very similar way to picture selection trials in the perceptual learning experiment - participants hear some audio and then click on an image button, which is pretty straightforward using the `audio-button-response` plugin. The only added complication here is that we want to simulate another person thinking for a moment before starting their description. Unfortunately there's no built-in way to do this within the `audio-button-response` plugin - I was hoping for a `delay_before_playing_audio` parameter or something, but there's no such thing. The solution is to have a sequence of two trials that looks like a single trial - one trial where nothing happens (to simulate the wait for the confederate to speak), then the actual `audio-button-response` trial where we get the audio from the confederate. I built these both using the `audio-button-response` trial - on the waiting trial we just play a tiny bit of silence as the `stimulus` (the plugin won't allow us to have *no* sound, so this was the closest I could get) and wait for a random duration, ignoring any clicks the participant makes, then we move on and play the confederate audio.  
 
-As usual, we'll write a function where we specify the main parts of the trial (the audio file the participant will hear, which I am calling `sound`; the target image, the foil/distractor image) and then the function returns a complex trial object for us. Here's the full chunk of code, I'll walk you through it piece by piece below:  
+We'll write a function where we specify the main parts of the trial (the audio file the participant will hear, which I am calling `sound`; the target image, the foil/distractor image) and then the function returns a complex trial object for us. Here's the full chunk of code, I'll walk you through it piece by piece below:  
 
 ```js
 function make_picture_selection_trial(sound, target_image, foil_image) {
@@ -151,7 +151,7 @@ function make_picture_selection_trial(sound, target_image, foil_image) {
 }
 ```
 
-First, we need to do some book-keeping. 
+First, the function does some book-keeping. 
 
 We add the images we are going to show on each trial to a list we are building up, called `images_to_preload` - I will say what this is for when I talk about preloading later!
 
@@ -161,14 +161,14 @@ We add the images we are going to show on each trial to a list we are building u
   images_to_preload.push(foil_image);
 ```
 
-We add the path for the sound file (all our sound files are in the `sounds` directory and have `.wav` on the end)
+We add the path for the sound file (all our sound files are in the `sounds` directory and have `.wav` on the end). This means we can specify the "interesting" part of the sound file and have the code take care of the rest of it for us.
 
 ```js
   //create sound file name
   var sound_file = "sounds/" + sound + ".wav";
 ```
 
-We then do some randomisation stuff: we generate a random wait using our `random_wait` function (for the period of silence before the confederate starts speaking), and we shuffle the order in which the two images will be displayed on-screen. Note that we are doing this here, when we create the trial, rather than in the `on_start`, because our picture selection trial is actually going to have a sequence of two sub-trials in it, and we want them to have the pictures in the same order (it would be super weird if the order of the images flipped part-way through the trial!). There are several ways this could be achieved, I thought this was the simplest.
+We then do some randomisation stuff: we generate a random wait using our `random_wait` function (for the period of silence before the confederate starts speaking), and we shuffle the order in which the two images will be displayed on-screen. Note that we are doing this here, rather than in the `on_start` of one of the sub-trials, because we want the to sub-trials to have the pictures appear in the same order (it would be super weird if the order of the images flipped part-way through the trial!). There are several ways this could be achieved, I thought this was the simplest.
 
 ```js
   //generate random wait and random order of images
@@ -208,9 +208,64 @@ return full_trial
 
 Later on we will call this `make_picture_selection_trial` function to create picture selection trials to stick in the experiment timeline.
 
+One further note: since both the sub-trials here are of the same `type` and use the same `prompt` and `choices`, I could have used a nested timeline in a slightly different way, as in the example below. I find the way I have done it here slightly easier to read (and write!) but as usual, there is more than one way to do these things.
+
+```js
+function make_picture_selection_trial_v2(sound, target_image, foil_image) {
+  images_to_preload.push(target_image);
+  images_to_preload.push(foil_image);
+
+  var sound_file = "sounds/" + sound + ".wav";
+
+  var wait_duration = random_wait();
+  var shuffled_image_choices = jsPsych.randomization.shuffle([
+    target_image,
+    foil_image,
+  ]);
+
+  //different way of constructing the nested timeline
+  var full_trial = {
+    //shared parameters across both sub-trials
+    type: jsPsychAudioButtonResponse,
+    prompt: "<p><em>Click on the picture your partner described</em></p>",
+    choices: shuffled_image_choices,
+    
+    //then the differences in a nested timeline
+    timeline: [
+      {
+        //first sub-trial, unique parameters
+        stimulus: "sounds/silence.wav",
+        trial_duration: wait_duration,
+        response_ends_trial: false, //just ignore any clicks the participant makes here!
+      button_html: function (choice) {
+        return '<button class="jspsych-btn" disabled="true"> <img src="images/' + choice + '.png" style="width: 250px"></button>'
+      }
+      },
+      {
+        //second sub-trial, unique parameters
+        stimulus: sound_file,
+        data: { participant_task: "picture_selection" }, 
+        save_trial_parameters: {choices: true}, //and we want to save the trial choices
+        button_html: function (choice) {
+          return '<button class="jspsych-btn"> <img src="images/' + choice + '.png" style="width: 250px"></button>'
+        },
+        post_trial_gap: 500, //a little pause after the participant makes their choice
+        on_finish: function (data) {
+          var button_number = data.response;
+          data.button_selected = data.choices[button_number];
+          save_confederate_priming_data(data); //save the trial data
+        },
+      }
+    ]
+  }; 
+  return full_trial;
+}
+```
+
+
 ### Picture description trials
 
-These involve the participant recording an audio description of a target image. Before we can do any audio recording we have to get the participant to grant us mic access, and have them select a mic. This is all in the code in the section "Infrastructure for recording audio", you can look there if you want to see how it's done. There is also a `save_audio` function defined in the `utilities.js` file, I'll explain its key features below and you can treat it as a black box or look at the details as you prefer.
+These involve the participant recording an audio description of a target image. Before we can do any audio recording we have to get the participant to grant us mic access, and have them select a mic. This is all in the code in the section "Infrastructure for recording audio", you can look there if you want to see how it's done. There is also a `save_audio` function defined in the `utilities.js` file, I'll explain its key features below and you can treat it as a black box.
 
 Once the audio stuff is set up we create our picture description trials - remember, for these the participant sees two images side by side, records a description, clicks to stop recording, and then "waits for their partner to make a picture selection" based on their description (in reality, the participant just gets a waiting message and waits for a random time). This can be achieved with a 2-part timeline: the initial trial where the participant sees the pair of images, speaks, and then clicks to stop recording, then the random wait. 
 
@@ -354,7 +409,7 @@ Now we can use this complex stimulus in an audio response trial, so the audio is
   };
 ```
 
-We specify a `recording_duration`, 10000ms, which is the max duration of recording, so if the participant doesn't stop the recording after 10 seconds it will stop recording automatically. Audio recording can generate very large files that can crash the participant's browser, so setting some limit is sensible. It is possible to have an open-ended recording by setting `recording_duration: null`. We specify the text on the done button using `done_button_label` - by default this is "Continue", which I worry sounds like you are clicking to begin recording. We also add some information to the trial data - a `participant_task` tag to note that this is a picture_description trial, and the target and foil image information.
+We specify a `recording_duration`, 10000ms, which is the max duration of recording, so if the participant doesn't stop the recording after 10 seconds it will stop recording automatically. Audio recording can generate very large files that can crash the participant's browser, so setting some limit is sensible. It is possible to have an open-ended recording by setting `recording_duration: null`. We specify the text on the done button using `done_button_label` - by default this is "Continue". We also add some information to the trial data - a `participant_task` tag to note that this is a picture description trial, and the target and foil image information.
 
 When the participant is done talking they click done to stop recording - so in this trial's `on_finish` parameter (which runs when they click the done button) we record their data.
 
@@ -414,7 +469,7 @@ We then combine `interaction_trials` with some other trials (information screens
 
 As I mentioned in last week's practical, jsPsych's `preload` plugin will pre-load images and audio for certain trial types, which makes the experiment run more smoothly and ensures that images you think participants are seeing have actually been loaded and are displaying. In particular, the image in `image-button-response` trials and the audio in `audio-button-response` trials are preloaded automatically if you include a preload plugin and set `auto_preload: true`. However, that won't automatically preload images used as buttons in `audio-button-response` trials, which means our image buttons in picture selection trials will not be pre-loaded, and it doesn't preload anything for `html-button-response` or `html-audio-response` trials, so our fancy composite images won't be preloaded either. Fortunately the `preload` plugin allows you to specify an additional list of images to be preloaded, which we will use to preload these images. 
 
-While we could manually code up a preload list (boring) or just load *all* the images we might conceivably need (a bit naughty since we are probably wasting the participant's bandwidth!), it's possible to get the code to construct this custom preload list for us. You might have attempted this last week, where we played around with working through a trial list and identifying images to preload. This week we are actually taking a slightly different approach: every time we build a trial, we make a note of the images we will need to preload. So right near the top of the `confederate_priming.js` file you'll find:
+While we could manually code up a preload list (boring) or just load *all* the images we might conceivably need (a bit naughty since we are probably wasting the participant's bandwidth!), it's possible to get the code to construct this custom preload list for us. You might have attempted this last week, where we played around with working through a trial list and identifying images to preload. This week we are taking a slightly different approach: every time we build a trial, we make a note of the images we will need to preload. So right near the top of the `confederate_priming.js` file you'll find:
 
 ```js
 //initially our images_to_preload list is empty
@@ -588,7 +643,7 @@ Being able to specify your trial list ahead of time and save it as a CSV file ca
 
 ## Exercises with the confederate priming experiment code
 
-Attempt these problems. Once you have had a go, you can [look at our notes](oels_practical_wk7_notes.md) which will be available after class.
+Attempt these problems. Once you have had a go, you can [look at our notes](oels_practical_wk9_notes.md) which will be available after class.
 - Run the basic `confederate_priming.html` experiment and look at the CSV and audio data files it creates. Check you can access the audio, and that you can see how the audio and the trial list link up - how do you know which audio corresponds to which trial in the CSV?
 - Run it again and see where the data from the second run is stored - you may need to refresh your cyberduck window with the refresh button.
 - The short trial list I built in `conferedate_priming.js` is for an overspecific confederate. How would you modify that trial list to simulate a minimally-specific confederate?
@@ -596,7 +651,7 @@ Attempt these problems. Once you have had a go, you can [look at our notes](oels
 - For this version of the experiment, how do you switch from an overspecific to minimally-specific confederate? (Hint: this involves changing the name of the file used by the `read_trials_and_prepare_timeline` function in the very last line of the code).
 - [Harder] Building on the previous question: how would you randomly allocate a participant to one of these two conditions, overspecific or minimally specific? Once you have attempted this, you can look at [my thoughts on how it could be done](oels_practical_wk7_extended.md) (which also covers the harder question later on). 
 - For either of these experiments, figure out how to disable image preloading for the button images and re-run the experiment. Can you see the difference? If it works smoothly, try running the experiment in Chrome in Incognito mode, which prevents your browser saving images etc for you. Can you see the difference now?
-- [Harder, optional] Can you change the `random_wait` function so it generates longer waits early in the experiment and shorter waits later on? Once you have attempted this, you can look at [my thoughts on how it could be done](oels_practical_wk7_extended.md).
+- [Harder, optional] Can you change the `random_wait` function so it generates longer waits early in the experiment and shorter waits later on? Once you have attempted this, you can look at [my thoughts on how it could be done](oels_practical_wk9_extended.md).
 
 
 ## References

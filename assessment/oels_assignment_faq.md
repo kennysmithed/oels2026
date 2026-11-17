@@ -58,7 +58,7 @@ Yes it does - I never want to read 5000 words of footnotes.
 Yes! Here are 2 high-scoring assignments from previous year's classes, plus the marker notes, kindly provided with approval by their authors. I have made redactions so you can't see the student names or other identifying information, which means I had to take out the URLs for their experiments (which include student numbers) - so I copied their code over to my jspsychlearning profile, URLs below. The marks they are at the end of the report. Note that these reports are longer than the word limit for the postgraduate assignment this year.
 - [Example 1 report](ProgrammingReportExample1.pdf). [Example 1 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example1/Example1.html)
 - [Example 2 report](ProgrammingReportExample2.pdf). [Example 2 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example2/Example2.html).
-- [Example 3 report](ProgrammingReportExample3.pdf). *Experiment link to follow!*
+- [Example 3 report](ProgrammingReportExample3.pdf). [Example 3 experiment](https://jspsychlearning.ppls.ed.ac.uk/~ksmith7/Assessment2Examples/Example3/Example3.html).
 
 ###  I plan to work on something that would involve recording new audio stimuli from speakers of different languages. For this class I wonder whether I can put a sort of placeholder stimuli in instead of the actual stimuli that would be used, and perhaps describe what each placeholder is supposed to be in the report. Would this be OK?
 

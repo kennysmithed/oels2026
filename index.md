@@ -135,6 +135,7 @@ Use this time to catch up or read ahead.
 - *Scientific content:* iterated learning and the evolution of compositional structure
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
 - [Reading](oels_reading_wk10.md)
+- [Programming task](oels_practical_wk10.md)
 <!--The usual-->
 
 

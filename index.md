@@ -136,6 +136,7 @@ Use this time to catch up or read ahead.
 - *Technical content:* looping trials, reading trial lists from CSVs again, PHP scripts for iteration
 - [Reading](oels_reading_wk10.md)
 - [Programming task](oels_practical_wk10.md)
+- [Lecture slides](slides/oels_lecture_wk10.pdf)
 <!--The usual-->
 
 

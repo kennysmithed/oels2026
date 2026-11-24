@@ -408,23 +408,22 @@ function build_testing_timeline(object_label_pairs) {
 
 Finally we are in a position to put all of these functions together. The function `run_experiment()`, code below, runs through a 6-step process of selecting an input filename to iterate from, building timelines and running the experiment, then saving an output language for the next generation to iterate from. The 6 steps are:
 
-1. We see if there are any input languages available for iteration. If not, we just tell the participant to come back later. If there at least one input language available, we proceed; we select a random input language to use, and extract the crucial information from that file (including the chain number, generation number, and the input language). The hard work here is done 
-by the `start_new_generation()` function, defined in the `utilities.js` file. If there are no chains available to iterate, this will return a javascript object
-```js
-{status: "no_chains_available"}
-```
-If there is at least one chain available, it will instead return:
+1. We see if there are any input languages available for iteration. If not, we just tell the participant to come back later. If there at least one input language available, we proceed; we select a random input language to use, and extract the crucial information from that file (including the chain number, generation number, and the input language). The hard work here is done by the `start_new_generation()` function, defined in the `utilities.js` file. If there are no chains available to iterate, this will return a javascript object
+  ```js
+  {status: "no_chains_available"}
+  ```
+  If there is at least one chain available, it will instead return:
 
-```js
-{
-  status: "chain_selected",
-  chain: C,
-  generation: G,
-  input_language_filename: F,
-  input_language: L
-}
-```
-where C is the chain number, G is the generation number for this participant (e.g. if we are going to train them on generation 1 of chain 2, this participant will be generation *2* of chain 2), F is the file-name of the language we are training them on, and L is an array providing the full training language read from the CSV file F. `start_new_generation()` also takes care of moving the input language file to the `undergoing_iteration` folder so that it doesn't get allocated to another participant.
+  ```js
+  {
+    status: "chain_selected",
+    chain: C,
+    generation: G,
+    input_language_filename: F,
+    input_language: L
+  }
+  ```
+  where C is the chain number, G is the generation number for this participant (e.g. if we are going to train them on generation 1 of chain 2, this participant will be generation *2* of chain 2), F is the file-name of the language we are training them on, and L is an array providing the full training language read from the CSV file F. `start_new_generation()` also takes care of moving the input language file to the `undergoing_iteration` folder so that it doesn't get allocated to another participant.
 
 2. Now use that input language to generate training trials for this participant. We impose a *bottleneck* on transmission by taking a subset of the language of the previous generation (here, 14 randomly-selected object-label pairs) and using that to build the training timeline (here, repeating each of those object-label pairs once).
 
@@ -543,7 +542,7 @@ As usual, try these yourself, and once you have had a go, you can [look at our n
 
 [Beckner, C., Pierrehumbert, J., & Hay, J. (2017). The emergence of linguistic structure in an online iterated learning task. *Journal of Language Evolution, 2*, 160–176.](https://doi.org/10.1093/jole/lzx001)
 
-[Smith, K., Ashton, C., & Sims-Williams, H. (2023). The Relationship Between Frequency and Irregularity in the Evolution of Linguistic Structure: An Experimental Study. In M. Goldwater, F. K. Anggoro, B. K. Hayes, & D. C. Ong (Eds.), Proceedings of the 45th Annual Conference of the Cognitive Science Society (pp. 851-857).](https://escholarship.org/uc/item/1mz1q97f)
+[Smith, K., Ashton, C., & Sims-Williams, H. (2023). The Relationship Between Frequency and Irregularity in the Evolution of Linguistic Structure: An Experimental Study. In M. Goldwater, F. K. Anggoro, B. K. Hayes, & D. C. Ong (Eds.), *Proceedings of the 45th Annual Conference of the Cognitive Science Society* (pp. 851-857).](https://escholarship.org/uc/item/1mz1q97f)
 
 ## Re-use
 

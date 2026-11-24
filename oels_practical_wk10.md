@@ -409,9 +409,11 @@ function build_testing_timeline(object_label_pairs) {
 Finally we are in a position to put all of these functions together. The function `run_experiment()`, code below, runs through a 6-step process of selecting an input filename to iterate from, building timelines and running the experiment, then saving an output language for the next generation to iterate from. The 6 steps are:
 
 1. We see if there are any input languages available for iteration. If not, we just tell the participant to come back later. If there at least one input language available, we proceed; we select a random input language to use, and extract the crucial information from that file (including the chain number, generation number, and the input language). The hard work here is done by the `start_new_generation()` function, defined in the `utilities.js` file. If there are no chains available to iterate, this will return a javascript object
+  
   ```js
   {status: "no_chains_available"}
   ```
+  
   If there is at least one chain available, it will instead return:
 
   ```js

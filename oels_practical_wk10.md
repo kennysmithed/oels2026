@@ -429,7 +429,7 @@ Finally we are in a position to put all of these functions together. The functio
 
    where C is the chain number, G is the generation number for this participant (e.g. if we are going to train them on generation 1 of chain 2, this participant will be generation *2* of chain 2), F is the file-name of the language we are training them on, and L is an array providing the full training language read from the CSV file F. `start_new_generation()` also takes care of moving the input language file to the `undergoing_iteration` folder so that it doesn't get allocated to another participant.
 
-2. K Now use that input language to generate training trials for this participant. We impose a *bottleneck* on transmission by taking a subset of the language of the previous generation (here, 14 randomly-selected object-label pairs) and using that to build the training timeline (here, repeating each of those object-label pairs once).
+2. Now use that input language to generate training trials for this participant. We impose a *bottleneck* on transmission by taking a subset of the language of the previous generation (here, 14 randomly-selected object-label pairs) and using that to build the training timeline (here, repeating each of those object-label pairs once).
 
 3. We also use that input language to build a testing timeline, requiring the participant to do a production trial for all possible objects (i.e. not just the 14 we selected for training - they have to generalise).
 

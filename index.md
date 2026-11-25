@@ -150,12 +150,12 @@ No lecture or lab in week 11, but there are some materials that will be useful f
 
 ### Bonus content
 
-I am sticking some extra documented experiments I have created here, in case they are useful for someone or provide inspiration.
+I am sticking some extra documented experiments I have created here, in case they are useful for someone or provide inspiration. These often use an earlier version of jsPsych and a less secure `save_data.php` script, so at the very least swap out the PHP for the version on this course!
 
-- [Co-speech gesture experiment](bonus/cospeech_gesture.md). Presenting a video and getting button/text responses.
-- [Participant-to-participant interaction](https://kennysmithed.github.io/oels2024/oels_practical_wk9.html). This is a real-time-interaction experiment allowing participants to be paired to play a simple button-clicking communication game together (based on the experiment in [Kanwal et al., 2017](https://doi.org/10.1016/j.cognition.2017.05.001)). It uses an earlier version of jsPsych and was probably a bit too advanced for this course, but is often useful for dissertation projects!
+- [Co-speech gesture experiment](https://kennysmithed.github.io/oels2024/bonus/cospeech_gesture.md). Presenting a video and getting button/text responses.
+- [Participant-to-participant interaction](https://kennysmithed.github.io/oels2024/oels_practical_wk9.html). This is a real-time-interaction experiment allowing participants to be paired to play a simple button-clicking communication game together (based on the experiment in [Kanwal et al., 2017](https://doi.org/10.1016/j.cognition.2017.05.001)). Often useful for dissertation projects!
 - [Semantic extension experiment](https://github.com/kennysmithed/SemanticExtension). This is a more complex experiment looking at how participants extend the meaning of novel signals in a communication game. It is based on the dyadic interaction code from the link above, but includes additional machinery to deal with a wider range of participant drop-outs, has on-screen trial counters, a warm-up with catch trials.
-- [Custom html-button-response plugin with buttons laid out in a grid](https://github.com/aislinnkeogh/custom-jspysch-plugins/blob/main/plugin-html-button-response-grid.js), written by Aislinn Keogh - uses an html table to do that, the plugin provides 2 additional parameters, `rows` and `columns`, e.g. for a 3 row, 2 column grid you'd do ```{type: jsPsychHtmlButtonResponseGrid, rows: 3, columns: 2, choices: [6 choices here]}```
+
 
 ## Additional drop-in labs for coding help with the final assignment
 

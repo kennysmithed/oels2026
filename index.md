@@ -140,12 +140,13 @@ Use this time to catch up or read ahead.
 <!--The usual-->
 
 
-### Week 11 (30th November): Interacting with MTurk
+### Week 11 (30th November): Interacting with Prolific
 
 No lecture or lab in week 11, but there are some materials that will be useful for you to read if you are thinking of setting up a real experiment in the wild, e.g. for your dissertation project!
 
 - *Scientific content:* None!
-- *Technical content:* How to set up a server, launch and pay participants, manage qualifications, etc
+- *Technical content:* How to set up a server, launch experiments and pay participants.
+- [Reading](oels_reading_wk11.md)
 <!--[How to get your experiment online](oels_wk10.md)-->
 
 ### Bonus content
